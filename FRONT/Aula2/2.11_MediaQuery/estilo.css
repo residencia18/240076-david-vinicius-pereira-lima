@@ -1,0 +1,18 @@
+.caixa {
+    background-color: blue;
+    width: 200px;
+    height:200px;
+}
+
+/*so funciona para largura ate os 300px*/
+@media (max-width: 300px){
+    h1 {
+        font-size: 12px;
+    }
+
+    .caixa{
+        background-color: rgb(108, 108, 220);
+        width: 50px;
+        height:50px;
+    }
+}

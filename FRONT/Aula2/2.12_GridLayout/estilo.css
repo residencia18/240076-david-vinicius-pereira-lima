@@ -1,0 +1,20 @@
+.tabelaGrid{
+    width: 250px;
+    display: grid;
+    /*proporcao de fracao* Ex: 1 coluna tem 10px a 2 coluna tera 20px*/
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: fr 1fr 1fr 1fr 1fr;
+    gap:1px;
+}
+
+.branco {
+    height: 50px;
+    width: 50px;
+    background-color: bisque;
+}
+
+.preto {
+    height: 50px;
+    width: 50px;
+    background-color:rgb(155, 109, 109);
+}

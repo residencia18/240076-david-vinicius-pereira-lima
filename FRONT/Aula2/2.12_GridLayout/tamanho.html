@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Definindo tamanho no grid layout</title>
+    <style>
+        /*grid-auto-rows*/
+        .caixagrid{
+            display: grid;
+            grid-template-columns: 200px 400px 10px;
+            grid-template-rows: 50px 100px 10px;
+        }
+
+        .it{
+            background-color: blueviolet;
+            border: black solid;
+            margin: 1px;
+        }
+
+        .caixa2{
+            display: grid;
+            grid-template-columns: 100px auto;
+            grid-template-rows: 50px auto;
+            /* para as rows ele consome o tamanho do conteudo
+            E nao a altura total da area disponivel */
+        }
+
+        .it2 {background-color: blueviolet;
+            border: black solid;
+            margin: 1px;
+            color: white;
+        }
+
+
+        .caixa3{
+            width: 500px;
+            display: grid;
+            grid-template-columns: 1fr 10% 100px 1fr ;
+            grid-template-rows: 3fr 1fr;
+        }
+
+        .it3 {background-color: darkgoldenrod;
+            border: black solid;
+            margin: 1px;
+            color: white;
+        }
+
+        .caixa4{
+            display: grid;
+            grid-template-columns: 3fr 3fr 1fr 1fr ;
+            grid-template-rows: auto 300px;
+        }
+
+        .it4 {background-color:slategrey;
+            border: black solid;
+            margin: 1px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tamanho estático</h1>
+    <div class="caixagrid">
+        <div class="it"></div>
+        <div class="it"></div>
+        <div class="it"></div>
+        <div class="it"></div>
+        <div class="it"></div>
+        <div class="it"></div>
+        <div class="it"></div>
+        <div class="it"></div>
+        <div class="it"></div>
+    </div>
+
+    <h1>Tamanho: auto</h1>
+
+    <div class="caixa2">
+        <div class="it2">1</div>
+        <div class="it2">2</div>
+        <div class="it2">3</div>
+        <div class="it2">4</div>
+    </div>
+
+    <h1>Tamanho: fractional ratio combinado</h1>
+
+    <div class="caixa3">
+        <div class="it3">1</div>
+        <div class="it3">2</div>
+        <div class="it3">3</div>
+        <div class="it3">4</div>
+        <div class="it3">5</div>
+        <div class="it3">6</div>
+        <div class="it3">7</div>
+        <div class="it3">8</div>
+    </div>
+    <h1>Tamanho: fractional ratio </h1>
+
+    <div class="caixa4">
+        <div class="it4">1</div>
+        <div class="it4">2</div>
+        <div class="it4">3</div>
+        <div class="it4">4</div>
+        <div class="it4">5</div>
+        <div class="it4">6</div>
+        <div class="it4">7</div>
+        <div class="it4">8</div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,35 @@
+html {
+    font-size: xx-large;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.pixel {
+    font-size: 10px;
+}
+
+.pixel {
+    font-size: 10pt;
+}
+
+.em {
+    font-size: 1em;
+}
+
+.em2 {
+    font-size: 2em;
+}
+
+.rems {
+    font-size: 2rem;
+}
+
+#fonte {
+    font-family: 'Bungee Spice', sans-serif;
+}
+

@@ -1,0 +1,48 @@
+<!--https://www.w3schools.com/css/css_grid.asp-->
+<!--https://cssgridgarden.com/-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Posicionamento</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            color: blue;
+        }
+
+        .i1{
+            background-color: red;
+        }
+
+        .i2{
+            background-color: firebrick;
+            grid-column: span 2;
+        }
+
+        .i3 {
+            background-color: khaki;
+        }
+
+        .i4 {
+            background-color: lightblue;
+        }
+
+        .i5 {
+            background-color: palevioletred
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="i1">1</div>
+        <div class="i2">2</div>
+        <div class="i3">3</div>
+        <div class="i4">4</div>
+        <div class="i5">5</div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,12 @@
+.caixa {
+    background-color: blue;
+    width: 200px;
+    height:200px;
+}
+
+/*entra em acao quando a largura passar dos 150px*/
+@media (min-width:150px) {
+    .caixa {
+        background-color: brown;
+    }
+}

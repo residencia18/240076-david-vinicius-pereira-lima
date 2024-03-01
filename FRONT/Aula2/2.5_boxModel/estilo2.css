@@ -1,0 +1,23 @@
+div {
+    height: 150px;
+    width: 150px;
+}
+
+#caixa1 {
+    border: 2px black solid;
+    border-style: dotted;
+}
+
+#caixa2 {
+    border:2px rgb(194, 23, 23) solid;
+    margin-left: 154px;
+}
+
+#caixa3 {
+    border:2px blueviolet solid;
+}
+
+#caixa4 {
+    border:2px brown solid;
+    margin-left: 154px;
+}
