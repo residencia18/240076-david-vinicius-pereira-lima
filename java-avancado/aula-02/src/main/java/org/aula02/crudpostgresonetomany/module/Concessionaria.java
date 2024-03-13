@@ -53,7 +53,7 @@ public class Concessionaria {
                 "\nCarros:\n"+str;
     }
 
-    public void mostrarCarro(){
+    public void mostrarConcessionaria(){
         System.out.println(toString());
     }
 
