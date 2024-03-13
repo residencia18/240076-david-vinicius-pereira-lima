@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/carro")
+@RequestMapping("/carro/")
 public class CarroController {
     @Autowired
     private CarroRepository carroRepository;
@@ -29,10 +29,10 @@ public class CarroController {
         return listaCarroDTO;
     }
     @GetMapping("/{id}")
-    public ResponseEntity<?> retornaCarroPlaca(@PathVariable Long id){
+    public ResponseEntity<?> retornaCarroID(@PathVariable Long id){
         if(id != null){
             try {
-                Carro carro = carroRepository.findCarroByPlaca(placa);
+                Carro carro = carroRepository.getReferenceById(id);
                 CarroDTO carroDTO = new CarroDTO(carro);
                 return ResponseEntity.ok(carroDTO);
             }
@@ -43,7 +43,7 @@ public class CarroController {
         else
             return ResponseEntity.badRequest().build();
     }
-    @GetMapping("/{placa}")
+    @GetMapping("/placa/{placa}")
     public ResponseEntity<?> retornaCarroPlaca(@PathVariable String placa){
         if(!placa.isEmpty()){
             try {
@@ -72,6 +72,27 @@ public class CarroController {
         catch (Exception e){
             return ResponseEntity.badRequest().build();
         }
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<?> updateCarro(@RequestBody CarroForm carroForm, @PathVariable Long id){
+        if(id != null){
+            try {
+                Carro carro = carroRepository.getReferenceById(id);
+                carro.setPlaca(carroForm.getPlaca());
+                carro.setMarca(carroForm.getMarca());
+                carro.setModelo(carroForm.getModelo());
+                carro.setAnoFabricacao(carroForm.getAnoFabricacao());
+                carroRepository.save(carro);
+                CarroDTO carroDTO = new CarroDTO(carro);
+                return ResponseEntity.ok(carroDTO);
+            }
+            catch (Exception e){
+                return ResponseEntity.notFound().build();
+            }
+        }
+        else
+            return ResponseEntity.badRequest().build();
     }
 
 
