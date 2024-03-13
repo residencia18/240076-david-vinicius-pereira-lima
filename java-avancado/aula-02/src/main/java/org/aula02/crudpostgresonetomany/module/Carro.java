@@ -71,7 +71,7 @@ public class Carro {
                 "Placa:\t"+placa+
                 "\nMarca:\t"+marca+
                 "\nModelo:\t"+modelo+
-                "\nAno de Lançamento:\t"+anoFabricacao+"\n";
+                "\nAno de Lançamento:\t"+anoFabricacao+"\n\n";
     }
 
     public void mostrarCarro(){
