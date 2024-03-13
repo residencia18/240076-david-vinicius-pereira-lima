@@ -60,5 +60,44 @@ public class ConcessionariaController {
         catch (Exception e){
             return ResponseEntity.badRequest().build();
         }
+        return null;
+    }
+
+    @PutMapping
+    public ResponseEntity<?>updateConcessionaria(@RequestBody ConcessionariaForm cf, @PathVariable Long id){
+        if(id != null){
+            try{
+                Concessionaria concessionaria = concessionariaRepository.getReferenceById(id);
+                concessionaria.setNome(cf.getNome());
+                concessionaria.setCarros(cf.getCarros());
+                concessionariaRepository.save(concessionaria);
+                ConcessionariaDTO concessionariaDTO = new ConcessionariaDTO(concessionaria);
+                return ResponseEntity.ok(concessionariaDTO);
+            }
+            catch (Exception e){
+                ResponseEntity.notFound().build();
+            }
+        }
+        else {
+            return ResponseEntity.badRequest().build();
+        }
+        return null;
+    }
+
+    @DeleteMapping
+    public ResponseEntity<?>deleteConcessionaria(@PathVariable Long id){
+        if(id!=null){
+            try {
+                Concessionaria concessionaria = concessionariaRepository.getReferenceById(id);
+                ConcessionariaDTO concessionariaDTO = new ConcessionariaDTO(concessionaria);
+                concessionariaRepository.delete(concessionaria);
+                System.out.println(concessionariaDTO + " DELETADO com sucesso!!!");
+                return ResponseEntity.ok(concessionariaDTO);
+            }
+            catch (Exception e){
+                return ResponseEntity.notFound().build();
+            }
+        }
+        return ResponseEntity.badRequest().build();
     }
 }
