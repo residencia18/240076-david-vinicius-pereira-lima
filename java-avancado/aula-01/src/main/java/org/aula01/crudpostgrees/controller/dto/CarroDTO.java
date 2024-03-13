@@ -33,4 +33,16 @@ public class CarroDTO {
     public int getAnoFabricacao() {
         return anoFabricacao;
     }
+
+    public String toString(){
+        return "Carro:\n"+
+                "Placa:\t"+placa+
+                "\nMarca:\t"+marca+
+                "\nModelo:\t"+modelo+
+                "\nAno de Lançamento:\t"+anoFabricacao+"\n";
+    }
+
+    public void mostrarCarro(){
+        System.out.println(toString());
+    }
 }

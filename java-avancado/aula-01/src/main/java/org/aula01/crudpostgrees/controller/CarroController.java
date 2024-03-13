@@ -95,14 +95,24 @@ public class CarroController {
             return ResponseEntity.badRequest().build();
     }
 
-
-
-
-
-
-
-
-
-
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleteCarro(@PathVariable Long id){
+        if(id != null){
+            try {
+                Carro carro = carroRepository.getReferenceById(id);
+                CarroDTO carroDTO = new CarroDTO(carro);
+                carroRepository.delete(carro);
+                System.out.println(carroDTO + " DELETADO com sucesso!!!");
+                return ResponseEntity.ok(carroDTO);
+            }
+            catch (Exception e){
+                ResponseEntity.notFound().build();
+            }
+        }
+        else {
+            return ResponseEntity.badRequest().build();
+        }
+        return null;
+    }
 
 }
