@@ -51,6 +51,6 @@ public class CarroForm {
     }
 
     public Carro criarCarro(){
-        return new Carro(placa, marca, modelo, anoFabricacao);
+        return new Carro(null, placa, marca, modelo, anoFabricacao);
     }
 }

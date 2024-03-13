@@ -18,11 +18,20 @@ public class Carro {
     public Carro() {
     }
 
-    public Carro(String placa, String marca, String modelo, int anoFabricacao) {
+    public Carro(Long id, String placa, String marca, String modelo, int anoFabricacao) {
+        this.id = id;
         this.placa = placa;
         this.marca = marca;
         this.modelo = modelo;
         this.anoFabricacao = anoFabricacao;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getPlaca() {

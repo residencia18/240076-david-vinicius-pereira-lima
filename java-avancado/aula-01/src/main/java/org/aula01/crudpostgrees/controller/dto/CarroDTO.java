@@ -1,5 +1,7 @@
 package org.aula01.crudpostgrees.controller.dto;
 
+import org.aula01.crudpostgrees.module.Carro;
+
 public class CarroDTO {
     private String placa;
     private String marca;
@@ -9,11 +11,11 @@ public class CarroDTO {
     public CarroDTO() {
     }
 
-    public CarroDTO(String placa, String marca, String modelo, int anoFabricacao) {
-        this.placa = placa;
-        this.marca = marca;
-        this.modelo = modelo;
-        this.anoFabricacao = anoFabricacao;
+    public CarroDTO(Carro carro) {
+        this.placa = carro.getPlaca();
+        this.marca = carro.getMarca();
+        this.modelo = carro.getModelo();
+        this.anoFabricacao = carro.getAnoFabricacao();
     }
 
     public String getPlaca() {
