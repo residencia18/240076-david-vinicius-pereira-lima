@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/concessionaria")
+@RequestMapping("/concessionaria/")
 public class ConcessionariaController {
     @Autowired
     private ConcessionariaRepository concessionariaRepository;
@@ -47,7 +47,7 @@ public class ConcessionariaController {
 
     }
 
-    @PostMapping("/{id}")
+    @PostMapping
     public ResponseEntity<?>inserirConcessionaria(@RequestBody ConcessionariaForm cf, UriComponentsBuilder uriBuilder){
         try {
             Concessionaria concessionaria = cf.criarConcessionaria();
@@ -68,8 +68,10 @@ public class ConcessionariaController {
         if(id != null){
             try{
                 Concessionaria concessionaria = concessionariaRepository.getReferenceById(id);
-                concessionaria.setNome(cf.getNome());
-                concessionaria.setCarros(cf.getCarros());
+                if(cf.getNome()!=null)
+                    concessionaria.setNome(cf.getNome());
+                if(cf.getCarros()!=null)
+                    concessionaria.setCarros(cf.getCarros());
                 concessionariaRepository.save(concessionaria);
                 ConcessionariaDTO concessionariaDTO = new ConcessionariaDTO(concessionaria);
                 return ResponseEntity.ok(concessionariaDTO);

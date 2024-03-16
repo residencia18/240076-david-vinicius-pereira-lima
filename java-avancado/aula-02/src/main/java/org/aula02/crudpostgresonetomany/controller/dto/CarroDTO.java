@@ -6,7 +6,7 @@ public class CarroDTO {
     private String placa;
     private String marca;
     private String modelo;
-    private int anoFabricacao;
+    private Integer anoFabricacao;
 
     public CarroDTO() {
     }
@@ -30,7 +30,7 @@ public class CarroDTO {
         return modelo;
     }
 
-    public int getAnoFabricacao() {
+    public Integer getAnoFabricacao() {
         return anoFabricacao;
     }
 

@@ -13,12 +13,12 @@ public class Carro {
     private String placa;
     private String marca;
     private String modelo;
-    private int anoFabricacao;
+    private Integer anoFabricacao;
 
     public Carro() {
     }
 
-    public Carro(Long id, String placa, String marca, String modelo, int anoFabricacao) {
+    public Carro(Long id, String placa, String marca, String modelo, Integer anoFabricacao) {
         this.id = id;
         this.placa = placa;
         this.marca = marca;
@@ -58,11 +58,11 @@ public class Carro {
         this.modelo = modelo;
     }
 
-    public int getAnoFabricacao() {
+    public Integer getAnoFabricacao() {
         return anoFabricacao;
     }
 
-    public void setAnoFabricacao(int anoFabricacao) {
+    public void setAnoFabricacao(Integer anoFabricacao) {
         this.anoFabricacao = anoFabricacao;
     }
 

@@ -79,10 +79,14 @@ public class CarroController {
         if(id != null){
             try {
                 Carro carro = carroRepository.getReferenceById(id);
-                carro.setPlaca(carroForm.getPlaca());
-                carro.setMarca(carroForm.getMarca());
-                carro.setModelo(carroForm.getModelo());
-                carro.setAnoFabricacao(carroForm.getAnoFabricacao());
+                if(carroForm.getPlaca()!=null)
+                    carro.setPlaca(carroForm.getPlaca());
+                if(carroForm.getMarca()!=null)
+                    carro.setMarca(carroForm.getMarca());
+                if(carroForm.getModelo()!=null)
+                    carro.setModelo(carroForm.getModelo());
+                if(carroForm.getAnoFabricacao()!=null)
+                    carro.setAnoFabricacao(carroForm.getAnoFabricacao());
                 carroRepository.save(carro);
                 CarroDTO carroDTO = new CarroDTO(carro);
                 return ResponseEntity.ok(carroDTO);

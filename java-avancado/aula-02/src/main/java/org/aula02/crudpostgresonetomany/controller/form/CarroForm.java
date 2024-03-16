@@ -6,12 +6,12 @@ public class CarroForm {
     private String placa;
     private String marca;
     private String modelo;
-    private int anoFabricacao;
+    private Integer anoFabricacao;
 
     public CarroForm() {
     }
 
-    public CarroForm(String placa, String marca, String modelo, int anoFabricacao) {
+    public CarroForm(String placa, String marca, String modelo, Integer anoFabricacao) {
         this.placa = placa;
         this.marca = marca;
         this.modelo = modelo;
@@ -42,11 +42,11 @@ public class CarroForm {
         this.modelo = modelo;
     }
 
-    public int getAnoFabricacao() {
+    public Integer getAnoFabricacao() {
         return anoFabricacao;
     }
 
-    public void setAnoFabricacao(int anoFabricacao) {
+    public void setAnoFabricacao(Integer anoFabricacao) {
         this.anoFabricacao = anoFabricacao;
     }
 
