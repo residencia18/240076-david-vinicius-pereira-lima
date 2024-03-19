@@ -1,10 +1,15 @@
 package org.aula03.test_swagger.controller;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.aula03.test_swagger.controller.dto.ConcessionariaDTO;
 import org.aula03.test_swagger.controller.form.ConcessionariaForm;
 import org.aula03.test_swagger.module.Concessionaria;
 import org.aula03.test_swagger.repository.ConcessionariaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -14,11 +19,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/concessionaria/")
+@RequestMapping(value = "api/concessionaria/", produces = {"application/json"})
+@Tag(name = "api-concessionária")
 public class ConcessionariaController {
     @Autowired
     private ConcessionariaRepository concessionariaRepository;
-    @GetMapping
+    @Operation(summary = "Retorna lista de concessionárias", method = "GET")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Lista de concessionária retornada com sucesso"),
+            @ApiResponse(responseCode = "400", description = "Bad Request")
+    })
+    @GetMapping(consumes = MediaType.ALL_VALUE)
     public List<ConcessionariaDTO> retornaConcessionarias(){
         List<Concessionaria> listaConcessionarias =  concessionariaRepository.findAll();
         List<ConcessionariaDTO> listaConcessionariasDTO = new ArrayList<ConcessionariaDTO>();
@@ -28,8 +39,13 @@ public class ConcessionariaController {
         }
         return listaConcessionariasDTO;
     }
-
-    @GetMapping("/{id}")
+    @Operation(summary = "Retorna Concessionária por Id", method = "GET")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Concessionária encontrado com sucesso"),
+            @ApiResponse(responseCode = "400", description = "Id da Concessionária é null"),
+            @ApiResponse(responseCode = "404", description = "Id da Concessionária não foi encontrado")
+    })
+    @GetMapping(value = "/{id}", consumes = MediaType.ALL_VALUE)
     public ResponseEntity<?>concessionarioByID(@PathVariable Long id){
         if (id != null){
             try {
@@ -45,8 +61,12 @@ public class ConcessionariaController {
             return ResponseEntity.badRequest().build();
 
     }
-
-    @PostMapping
+    @Operation(summary = "Inserir nova concessionária", method = "POST")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Concessionária cadastrada com sucesso"),
+            @ApiResponse(responseCode = "400", description = "Concessionária não pôde ser cadastrada")
+    })
+    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?>inserirConcessionaria(@RequestBody ConcessionariaForm cf, UriComponentsBuilder uriBuilder){
         try {
             Concessionaria concessionaria = cf.criarConcessionaria();
@@ -61,8 +81,13 @@ public class ConcessionariaController {
         }
         return null;
     }
-
-    @PutMapping
+    @Operation(summary = "Atualizar dados da concessionária", method = "PUT")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Concessionária atualizada com sucesso"),
+            @ApiResponse(responseCode = "400", description = "Id da concessionária é null"),
+            @ApiResponse(responseCode = "404", description = "Id da concessionária não foi encontrado")
+    })
+    @PutMapping(value ="/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?>updateConcessionaria(@RequestBody ConcessionariaForm cf, @PathVariable Long id){
         if(id != null){
             try{
@@ -84,8 +109,13 @@ public class ConcessionariaController {
         }
         return null;
     }
-
-    @DeleteMapping
+    @Operation(summary = "Deletar uma concessionária do BD", method = "DELETE")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Concessionária deletada com sucesso"),
+            @ApiResponse(responseCode = "400", description = "Id da concessionária tem valor null"),
+            @ApiResponse(responseCode = "404", description = "Id da concessionária não foi encontrado")
+    })
+    @DeleteMapping(value = ("/{id}"), consumes = MediaType.ALL_VALUE)
     public ResponseEntity<?>deleteConcessionaria(@PathVariable Long id){
         if(id!=null){
             try {
