@@ -8,21 +8,32 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @RestController
-@RequestMapping("api/employee")
+@RequestMapping("/api/employee")
 public class EmployeeController {
     @Autowired
     private EmployeeRepository employeeRepository;
     @Autowired
     private ProjectRepository projectRepository;
-    @PostMapping(value = "/createEmployee")
+    @PostMapping(value = "/createEmployee/")
     public String createEmployee(@RequestBody Employee entity){
         System.out.println("Create a new Employee.\n");
         Employee employee = new Employee(entity.getName(), entity.getEmail(), entity.getTechnicalSkill());
         employee = employeeRepository.save(employee);
         System.out.println("Saved employee:\t"+employee+"\n");
+        return "Employee saved";
+    }
+    @PostMapping(value = "/createEmployees/")
+    public String createEmployee(@RequestBody List<Employee> entitys){
+        System.out.println("Create a new Employee.\n");
+        for (Employee entity : entitys) {
+            Employee employee = new Employee(entity.getName(), entity.getEmail(), entity.getTechnicalSkill());
+            employee = employeeRepository.save(employee);
+            System.out.println("Saved employee:\t" + employee + "\n");
+        }
         return "Employee saved";
     }
 
