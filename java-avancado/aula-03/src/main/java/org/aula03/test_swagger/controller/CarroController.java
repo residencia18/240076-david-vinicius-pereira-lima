@@ -1,6 +1,11 @@
 package org.aula03.test_swagger.controller;
 
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.persistence.Table;
 import org.aula03.test_swagger.controller.dto.CarroDTO;
 import org.aula03.test_swagger.controller.form.CarroForm;
 import org.aula03.test_swagger.module.Carro;
@@ -15,10 +20,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/carro/")
+@RequestMapping(value = "api/carro/", produces = {"application/json"})
+@Tag(name = "api-aula03")
 public class CarroController {
     @Autowired
     private CarroRepository carroRepository;
+    @Operation(summary = "Retorna uma lista de todos os carros do banco de dados", method = "GET")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Lista retornada com sucesso!"),
+            @ApiResponse(responseCode = "400", description = "Bad Request")
+    })
     @GetMapping
     public List<CarroDTO> retornaCarros(){
         List<Carro>listaCarro = (ArrayList<Carro>)carroRepository.findAll();
@@ -29,6 +40,12 @@ public class CarroController {
         }
         return listaCarroDTO;
     }
+    @Operation(summary = "Retorna um carro através do Id", method = "GET")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Carro encontrado com sucesso"),
+            @ApiResponse(responseCode = "400", description = "Id do carro é nulo"),
+            @ApiResponse(responseCode = "404", description = "Id do carro não foi encontrado")
+    })
     @GetMapping("/{id}")
     public ResponseEntity<?> retornaCarroID(@PathVariable Long id){
         if(id != null){
@@ -44,6 +61,12 @@ public class CarroController {
         else
             return ResponseEntity.badRequest().build();
     }
+    @Operation(summary = "Retorna um carro através da sua placa", method = "GET")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Carro encontrado com sucesso"),
+            @ApiResponse(responseCode = "400", description = "Placa do carro está vazia"),
+            @ApiResponse(responseCode = "404", description = "Placa do carro não encontrada")
+    })
     @GetMapping("/placa/{placa}")
     public ResponseEntity<?> retornaCarroPlaca(@PathVariable String placa){
         if(!placa.isEmpty()){
