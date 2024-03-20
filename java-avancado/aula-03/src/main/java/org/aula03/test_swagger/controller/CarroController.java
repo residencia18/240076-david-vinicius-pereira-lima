@@ -108,25 +108,15 @@ public class CarroController {
             @ApiResponse(responseCode = "404", description = "Inserção dos carros não teve sucesso")
     })
     @PostMapping(value = "/inserirLista/", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<?>inserirCarros(@RequestBody List<CarroForm> listaCarroForm, UriComponentsBuilder uriBuilder){
+    public ResponseEntity<?> inserirCarros(@RequestBody List<CarroForm> listaCarroForm, UriComponentsBuilder uriBuilder) {
         try {
-            List<URI> uris = new ArrayList<>();
+            List<CarroDTO> carrosDTO = new ArrayList<>();
             for (CarroForm carroForm : listaCarroForm) {
                 Carro carro = carroForm.criarCarro();
                 carroRepository.save(carro);
-                CarroDTO carroDTO = new CarroDTO(carro);
-                URI uri = uriBuilder.path("carro/{id}").buildAndExpand(carro.getId()).toUri();
-                uris.add(uri);
+                carrosDTO.add(new CarroDTO(carro));
             }
-            if (!uris.isEmpty()) {
-                List<ResponseEntity<?>> responses = new ArrayList<>();
-                for (URI uri : uris) {
-                    responses.add(ResponseEntity.created(uri).build());
-                }
-                return ResponseEntity.ok().body(responses);
-            } else {
-                return ResponseEntity.notFound().build();
-            }
+            return ResponseEntity.ok().body(carrosDTO);
         } catch (Exception e) {
             return ResponseEntity.badRequest().build();
         }
