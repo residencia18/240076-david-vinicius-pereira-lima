@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.aula03.test_swagger.controller.dto.CarroDTO;
 import org.aula03.test_swagger.controller.dto.ConcessionariaDTO;
 import org.aula03.test_swagger.controller.form.ConcessionariaForm;
 import org.aula03.test_swagger.module.Concessionaria;
@@ -80,6 +81,24 @@ public class ConcessionariaController {
             return ResponseEntity.badRequest().build();
         }
         return null;
+    }@Operation(summary = "Inserir nova lista de concessionárias", method = "POST")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Concessionárias cadastradas com sucesso"),
+            @ApiResponse(responseCode = "400", description = "Concessionárias não foram cadastradas")
+    })
+    @PostMapping(value ="/inserirListas/" , consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<?>inserirConcessionarias(@RequestBody List<ConcessionariaForm> listaCf, UriComponentsBuilder uriBuilder){
+        try {
+            List<ConcessionariaDTO>listaConcessionariaDTO = new ArrayList<>();
+            for(ConcessionariaForm concessionariaForm : listaCf) {
+                Concessionaria concessionaria = concessionariaForm.criarConcessionaria();
+                concessionariaRepository.save(concessionaria);
+                listaConcessionariaDTO.add(new ConcessionariaDTO(concessionaria));
+            }
+            return ResponseEntity.ok().body(listaConcessionariaDTO);
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().build();
+        }
     }
     @Operation(summary = "Atualizar dados da concessionária", method = "PUT")
     @ApiResponses(value = {

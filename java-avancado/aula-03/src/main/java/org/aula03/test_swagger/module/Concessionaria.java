@@ -15,10 +15,9 @@ public class Concessionaria {
     public Concessionaria() {
     }
 
-    public Concessionaria(Long id, String nome, List<Carro> carros) {
+    public Concessionaria(Long id, String nome) {
         this.id = id;
         this.nome = nome;
-        this.carros = carros;
     }
 
     public Long getId() {

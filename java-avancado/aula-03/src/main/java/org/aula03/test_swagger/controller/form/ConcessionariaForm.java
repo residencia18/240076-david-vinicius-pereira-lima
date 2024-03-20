@@ -29,6 +29,6 @@ public class ConcessionariaForm {
     }
 
     public Concessionaria criarConcessionaria(){
-        return new Concessionaria(null, nome, carros);
+        return new Concessionaria(null, nome);
     }
 }
