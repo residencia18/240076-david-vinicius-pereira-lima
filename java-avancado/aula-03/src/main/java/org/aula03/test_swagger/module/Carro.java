@@ -23,7 +23,7 @@ public class Carro {
         this.setPlaca(placa);
         this.marca = marca;
         this.modelo = modelo;
-        this.anoFabricacao = anoFabricacao;
+        this.setAnoFabricacao(anoFabricacao);
     }
 
     public Long getId() {
@@ -69,8 +69,17 @@ public class Carro {
         return anoFabricacao;
     }
 
-    public void setAnoFabricacao(Integer anoFabricacao) {
-        this.anoFabricacao = anoFabricacao;
+    public void setAnoFabricacao(Integer anoFabricacao) throws Exception{
+        if (anoFabricacao == null)
+            throw new Exception("Ano de fabricação não pode ser nulo");
+        else if (anoFabricacao < 0)
+            throw new Exception("Ano de fabricação não pode ser negativo");
+        else if (anoFabricacao < 1960)
+            throw new Exception("Ano de fabricação abaixo de 1960");
+        else if (anoFabricacao > 2999)
+            throw new Exception("Ano de fabricação acima de 2999");
+        else
+            this.anoFabricacao = anoFabricacao;
     }
 
     public String toString(){
