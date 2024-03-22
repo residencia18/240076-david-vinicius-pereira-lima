@@ -5,18 +5,19 @@ import com.loguse.aula05.module.Project;
 import com.loguse.aula05.repository.EmployeeRepository;
 import com.loguse.aula05.repository.ProjectRepository;
 import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashSet;
 import java.util.Set;
-import java.util.logging.Logger;
+
 
 @RestController
 @RequestMapping("api/project")
 
 public class ProjectController {
-    private static Logger log = (Logger) LoggerFactory.getLogger(ProjectController.class);
+    private static Logger log = LoggerFactory.getLogger(ProjectController.class);
     @Autowired
     private ProjectRepository projectRepository;
     @Autowired

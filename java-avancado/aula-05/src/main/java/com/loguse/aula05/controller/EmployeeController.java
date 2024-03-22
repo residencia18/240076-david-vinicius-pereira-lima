@@ -5,18 +5,18 @@ import com.loguse.aula05.module.Project;
 import com.loguse.aula05.repository.EmployeeRepository;
 import com.loguse.aula05.repository.ProjectRepository;
 import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.logging.Logger;
 
 @RestController
 @RequestMapping("/api/employee")
 public class EmployeeController {
-    private static Logger log = (Logger) LoggerFactory.getLogger(EmployeeController.class);
+    private static Logger log = LoggerFactory.getLogger(EmployeeController.class);
     @Autowired
     private EmployeeRepository employeeRepository;
     @Autowired
@@ -26,7 +26,7 @@ public class EmployeeController {
         log.info("Create a new Employee.\n");
         Employee employee = new Employee(entity.getName(), entity.getEmail(), entity.getTechnicalSkill());
         employee = employeeRepository.save(employee);
-        System.out.println("Saved employee:\t"+employee+"\n");
+        log.info("Saved employee:\t"+employee+"\n");
         return "Employee saved";
     }
     @PostMapping(value = "/createEmployees/")
