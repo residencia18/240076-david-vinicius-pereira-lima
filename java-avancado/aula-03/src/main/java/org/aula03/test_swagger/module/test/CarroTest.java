@@ -72,10 +72,45 @@ public class CarroTest {
        Integer anoFab = null;
        try {
            carro.setAnoFabricacao(anoFab);
-           assertNull(carro.getAnoFabricacao());
        } catch (Exception e) {
             assertEquals("Ano de fabricação não pode ser nulo" , e.getMessage());
        }
        assertNotEquals(anoFab, carro.getAnoFabricacao());
+    }
+
+    @Test
+    public void definirAnoFabricacaoNegativo(){
+        Carro carro = new Carro();
+        Integer anoFab = -2012;
+        try {
+            carro.setAnoFabricacao(anoFab);
+        } catch (Exception e) {
+            assertEquals("Ano de fabricação não pode ser negativo" , e.getMessage());
+        }
+        assertNotEquals(anoFab, carro.getAnoFabricacao());
+    }
+
+    @Test
+    public void definirAnoFabricacaoMenor(){
+        Carro carro = new Carro();
+        Integer anoFab = 1912;
+        try {
+            carro.setAnoFabricacao(anoFab);
+        } catch (Exception e) {
+            assertEquals("Ano de fabricação abaixo de 1960" , e.getMessage());
+        }
+        assertNotEquals(anoFab, carro.getAnoFabricacao());
+    }
+
+    @Test
+    public void definirAnoFabricacaoMaior(){
+        Carro carro = new Carro();
+        Integer anoFab = 3001;
+        try {
+            carro.setAnoFabricacao(anoFab);
+        } catch (Exception e) {
+            assertEquals("Ano de fabricação acima de 2999" , e.getMessage());
+        }
+        assertNotEquals(anoFab, carro.getAnoFabricacao());
     }
 }
