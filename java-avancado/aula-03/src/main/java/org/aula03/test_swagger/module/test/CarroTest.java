@@ -113,4 +113,64 @@ public class CarroTest {
         }
         assertNotEquals(anoFab, carro.getAnoFabricacao());
     }
+
+    @Test
+    public void definirMarca(){
+        Carro carro = new Carro();
+        String marca = "Audi";
+        try {
+            carro.setMarca(marca);
+        } catch (Exception e) {
+            fail("Exceção indevida: "+e.getMessage());
+        }
+        assertEquals(marca, carro.getMarca());
+    }
+
+    @Test
+    public void definirMarcaNula(){
+        Carro carro = new Carro();
+        String marca = "";
+        try {
+            carro.setMarca(marca);
+        } catch (Exception e) {
+            assertEquals("Marca não pode ser nula ou vazia" , e.getMessage());
+        }
+        assertNotEquals(marca, carro.getMarca());
+    }
+
+    @Test
+    public void definirMarcaComDigitos(){
+        Carro carro = new Carro();
+        String marca = "Audi 123";
+        try {
+            carro.setMarca(marca);
+        } catch (Exception e) {
+            assertEquals("Marca não pode conter dígitos" , e.getMessage());
+        }
+        assertNotEquals(marca, carro.getMarca());
+    }
+
+    @Test
+    public void definirTamanhoMarca(){
+        Carro carro = new Carro();
+        String marca = "Au";
+        try {
+            carro.setMarca(marca);
+        } catch (Exception e) {
+            assertEquals("Tamanho da marca menor que 3" , e.getMessage());
+        }
+        assertNotEquals(marca, carro.getMarca());
+    }
+
+    @Test
+    public void definirMarcaDespadronizada(){
+        Carro carro = new Carro();
+        String marca = "audi";
+        try {
+            carro.setMarca(marca);
+        } catch (Exception e) {
+            assertEquals("Marca não segue o padrão correto" , e.getMessage());
+        }
+        assertNotEquals(marca, carro.getMarca());
+    }
 }

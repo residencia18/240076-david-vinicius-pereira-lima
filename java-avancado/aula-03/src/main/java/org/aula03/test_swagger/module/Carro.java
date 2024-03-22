@@ -21,7 +21,7 @@ public class Carro {
     public Carro(Long id, String placa, String marca, String modelo, Integer anoFabricacao) throws Exception {
         this.id = id;
         this.setPlaca(placa);
-        this.marca = marca;
+        this.setMarca(marca);
         this.modelo = modelo;
         this.setAnoFabricacao(anoFabricacao);
     }
@@ -53,8 +53,17 @@ public class Carro {
         return marca;
     }
 
-    public void setMarca(String marca) {
-        this.marca = marca;
+    public void setMarca(String marca) throws Exception {
+        if(marca == null || marca.isEmpty())
+            throw new Exception("Marca não pode ser nula ou vazia");
+        else if(marca.chars().anyMatch(Character::isDigit))
+            throw new Exception("Marca não pode conter dígitos");
+        else if (marca.length() < 3)
+            throw new Exception("Tamanho da marca menor que 3");
+        else if (!verificaMarca(marca))
+            throw new Exception("Marca não segue o padrão correto");
+        else
+            this.marca = marca;
     }
 
     public String getModelo() {
@@ -97,6 +106,10 @@ public class Carro {
     public boolean verificaPlaca(String placa){
         String regex = "[A-Z]{3}\\d[A-Z]\\d{2}$";
         return placa.matches(regex);
+    }
+
+    public boolean verificaMarca(String nome){
+        return nome.matches("[A-Z][a-zA-Z]+$");
     }
 
 }
