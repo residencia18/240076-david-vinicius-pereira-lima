@@ -14,7 +14,6 @@ public class ConcessionariaDTO {
 
     public ConcessionariaDTO(Concessionaria concessionaria) {
         this.nome = concessionaria.getNome();
-        this.carros = concessionaria.getCarros();
     }
 
     public String getNome() {
