@@ -5,7 +5,6 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import jakarta.persistence.Table;
 import org.aula03.test_swagger.controller.dto.CarroDTO;
 import org.aula03.test_swagger.controller.form.CarroForm;
 import org.aula03.test_swagger.module.Carro;

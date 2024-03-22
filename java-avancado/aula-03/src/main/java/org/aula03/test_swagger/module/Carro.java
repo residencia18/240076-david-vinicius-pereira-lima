@@ -18,9 +18,9 @@ public class Carro {
     public Carro() {
     }
 
-    public Carro(Long id, String placa, String marca, String modelo, Integer anoFabricacao) {
+    public Carro(Long id, String placa, String marca, String modelo, Integer anoFabricacao) throws Exception {
         this.id = id;
-        this.placa = placa;
+        this.setPlaca(placa);
         this.marca = marca;
         this.modelo = modelo;
         this.anoFabricacao = anoFabricacao;
@@ -38,8 +38,15 @@ public class Carro {
         return placa;
     }
 
-    public void setPlaca(String placa) {
-        this.placa = placa;
+    public void setPlaca(String placa) throws Exception{
+        if(placa == null || placa.isEmpty())
+            throw new Exception("Placa não pode estar vazia ou nula");
+        else if (placa.length() != 7)
+            throw new Exception("Tamanho da placa é diferente de 7");
+        else if (!verificaPlaca(placa))
+            throw new Exception("Placa não segue padrão correto");
+        else
+            this.placa = placa;
     }
 
     public String getMarca() {
@@ -76,6 +83,11 @@ public class Carro {
 
     public void mostrarCarro(){
         System.out.println(toString());
+    }
+
+    public boolean verificaPlaca(String placa){
+        String regex = "[A-Z]{3}\\d[A-Z]\\d{2}$";
+        return placa.matches(regex);
     }
 
 }

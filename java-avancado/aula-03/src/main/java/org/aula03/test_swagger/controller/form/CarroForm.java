@@ -51,7 +51,7 @@ public class CarroForm {
         this.anoFabricacao = anoFabricacao;
     }
 
-    public Carro criarCarro(){
+    public Carro criarCarro() throws Exception {
         return new Carro(null, placa, marca, modelo, anoFabricacao);
     }
 }
