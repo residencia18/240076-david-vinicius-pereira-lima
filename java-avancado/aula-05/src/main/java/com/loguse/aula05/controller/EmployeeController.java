@@ -4,23 +4,26 @@ import com.loguse.aula05.module.Employee;
 import com.loguse.aula05.module.Project;
 import com.loguse.aula05.repository.EmployeeRepository;
 import com.loguse.aula05.repository.ProjectRepository;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.logging.Logger;
 
 @RestController
 @RequestMapping("/api/employee")
 public class EmployeeController {
+    private static Logger log = (Logger) LoggerFactory.getLogger(EmployeeController.class);
     @Autowired
     private EmployeeRepository employeeRepository;
     @Autowired
     private ProjectRepository projectRepository;
     @PostMapping(value = "/createEmployee/")
     public String createEmployee(@RequestBody Employee entity){
-        System.out.println("Create a new Employee.\n");
+        log.info("Create a new Employee.\n");
         Employee employee = new Employee(entity.getName(), entity.getEmail(), entity.getTechnicalSkill());
         employee = employeeRepository.save(employee);
         System.out.println("Saved employee:\t"+employee+"\n");
@@ -28,61 +31,61 @@ public class EmployeeController {
     }
     @PostMapping(value = "/createEmployees/")
     public String createEmployee(@RequestBody List<Employee> entitys){
-        System.out.println("Create a new Employee.\n");
+        log.info("Create a new Employee.\n");
         for (Employee entity : entitys) {
             Employee employee = new Employee(entity.getName(), entity.getEmail(), entity.getTechnicalSkill());
             employee = employeeRepository.save(employee);
-            System.out.println("Saved employee:\t" + employee + "\n");
+            log.info("Saved employee:\t" + employee + "\n");
         }
         return "Employee saved";
     }
 
     @PostMapping(value = "createEmployeeForProject/{projId}")
     public String createEmployeeForProject(@RequestBody Employee entity, @PathVariable(name = "projId") String projId){
-        System.out.println("Create a new Employee and assing to an existing Project.\n");
+        log.info("Create a new Employee and assing to an existing Project.\n");
         Employee employee = new Employee(entity.getName(), entity.getEmail(), entity.getTechnicalSkill());
         employeeRepository.save(employee);
-        System.out.println("Saved employee:\t"+employee+"\n");
+        log.info("Saved employee:\t"+employee+"\n");
         Project project = this.projectRepository.getReferenceById(Integer.valueOf(projId));
-        System.out.println("Project details:\t"+project.toString()+"\n");
+        log.info("Project details:\t"+project.toString()+"\n");
         Set<Employee> employees = new HashSet<>();
         employees.add(employee);
         project.setEmployees(employees);
         project = projectRepository.save(project);
-        System.out.println("Employee assigned to the project.");
+        log.info("Employee assigned to the project.");
         return "Employee saved!!!";
     }
 
     @PostMapping(value = "/assignEmployeeToProject/{projId}")
     public String assignEmployeeToProject(@PathVariable(name = "projId") Integer projId){
-        System.out.println("Fetch existing Employee details and assign them to an existing project.");
+        log.info("Fetch existing Employee details and assign them to an existing project.");
         int empId = 1;
         Employee employee1 = this.employeeRepository.getReferenceById(empId);
-        System.out.println("Employee details:\t"+employee1.toString()+"\n");
+        log.info("Employee details:\t"+employee1.toString()+"\n");
 
         empId = 8;
         Employee employee2 = this.employeeRepository.getReferenceById(empId);
-        System.out.println("Employee details:\t"+employee2.toString()+"\n");
+        log.info("Employee details:\t"+employee2.toString()+"\n");
 
         Project project = this.projectRepository.getReferenceById(projId);
-        System.out.println("Project details:\t"+project.toString()+"\n");
+        log.info("Project details:\t"+project.toString()+"\n");
 
         Set<Employee>employees = new HashSet<>();
         employees.add(employee1);
         employees.add(employee2);
         project.setEmployees(employees);
         project = projectRepository.save(project);
-        System.out.println("Employees assigned to the Project.");
+        log.info("Employees assigned to the Project.");
         return "Employee saved!!!";
     }
 
     @GetMapping(value = "/getEmployee/{empId}")
     public String getEmployee(@PathVariable(name = "empId") Integer empId){
-        System.out.println("Fetch Employee and Project details.");
+        log.info("Fetch Employee and Project details.");
         Employee employee = this.employeeRepository.getReferenceById(empId);
-        System.out.println("Employee details:\t"+employee.toString()+"\n");
-        System.out.println("Project details:\t"+employee.getProjects()+"\n");
-        System.out.println("Done!!!\n");
+        log.info("Employee details:\t"+employee.toString()+"\n");
+        log.info("Project details:\t"+employee.getProjects()+"\n");
+        log.info("Done!!!\n");
         return "Employee fetched sucessfully!!!";
 
     }
