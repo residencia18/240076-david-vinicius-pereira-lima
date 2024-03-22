@@ -3,8 +3,7 @@ package org.aula03.test_swagger.module.test;
 import org.aula03.test_swagger.module.Carro;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
+import static org.junit.Assert.*;
 
 public class CarroTest {
    @Test
@@ -22,6 +21,14 @@ public class CarroTest {
     @Test
     public void definirPlacaNula(){
        Carro carro = new Carro();
-       String dataFabricacao = ""
+       String placa = "";
+       try {
+           carro.setPlaca(placa);
+       }catch (Exception e){
+            assertEquals("Placa não pode estar vazia ou nula", e.getMessage());
+       }
+       assertNotEquals(placa , carro.getPlaca());
     }
+
+
 }
