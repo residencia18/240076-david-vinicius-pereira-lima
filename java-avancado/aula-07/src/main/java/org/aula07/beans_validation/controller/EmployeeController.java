@@ -1,10 +1,9 @@
-package org.aula06.lombok.controller;
+package org.aula07.beans_validation.controller;
 
-
-import org.aula06.lombok.module.Employee;
-import org.aula06.lombok.module.Project;
-import org.aula06.lombok.repository.EmployeeRepository;
-import org.aula06.lombok.repository.ProjectRepository;
+import org.aula07.beans_validation.module.Employee;
+import org.aula07.beans_validation.module.Project;
+import org.aula07.beans_validation.repository.EmployeeRepository;
+import org.aula07.beans_validation.repository.ProjectRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,8 @@
 package org.aula07.beans_validation.module;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.*;
 
 import java.util.Set;
@@ -21,9 +23,13 @@ public class Project {
     private int id;
 
     @Column(name = "projectName")
+    @NotNull(message = "Project Name cannot be null")
+    @Size(min = 5, max = 200, message = "Project Name must to be between 5 and 200 characters")
     @NonNull private String projectName;
 
     @Column(name = "technologyUsed")
+    @NotNull(message = "Technology Used cannot be null")
+    @Size(min = 5, max = 200, message = "Technology Used must to be between 5 and 200 characters")
     @NonNull private String technologyUsed;
 
     @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
