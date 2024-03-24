@@ -1,0 +1,76 @@
+2024-03-24T12:09:56.661-03:00  INFO 13432 --- [aula-06] [restartedMain] org.aula06.lombok.Aula06Application      : Starting Aula06Application using Java 21.0.2 with PID 13432 (C:\Users\david\OneDrive\Área de Trabalho\Programaçao\residencia-avancado\240076-david-vinicius-pereira-lima\java-avancado\aula-06\target\classes started by david in C:\Users\david\OneDrive\Área de Trabalho\Programaçao\residencia-avancado\240076-david-vinicius-pereira-lima\java-avancado\aula-06)
+2024-03-24T12:09:56.663-03:00  INFO 13432 --- [aula-06] [restartedMain] org.aula06.lombok.Aula06Application      : No active profile set, falling back to 1 default profile: "default"
+2024-03-24T12:09:56.714-03:00  INFO 13432 --- [aula-06] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-03-24T12:09:56.715-03:00  INFO 13432 --- [aula-06] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-03-24T12:09:57.427-03:00  INFO 13432 --- [aula-06] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-24T12:09:57.480-03:00  INFO 13432 --- [aula-06] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 2 JPA repository interfaces.
+2024-03-24T12:09:58.086-03:00  INFO 13432 --- [aula-06] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-24T12:09:58.098-03:00  INFO 13432 --- [aula-06] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-24T12:09:58.099-03:00  INFO 13432 --- [aula-06] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-24T12:09:58.146-03:00  INFO 13432 --- [aula-06] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-24T12:09:58.147-03:00  INFO 13432 --- [aula-06] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1432 ms
+2024-03-24T12:09:58.319-03:00  INFO 13432 --- [aula-06] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-24T12:09:58.412-03:00  INFO 13432 --- [aula-06] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-03-24T12:09:58.460-03:00  INFO 13432 --- [aula-06] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-24T12:09:58.783-03:00  INFO 13432 --- [aula-06] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-24T12:09:58.824-03:00  INFO 13432 --- [aula-06] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-24T12:09:59.028-03:00  INFO 13432 --- [aula-06] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@25cd9f8a
+2024-03-24T12:09:59.029-03:00  INFO 13432 --- [aula-06] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-24T12:09:59.101-03:00  WARN 13432 --- [aula-06] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-03-24T12:10:00.218-03:00  INFO 13432 --- [aula-06] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-03-24T12:10:00.334-03:00  INFO 13432 --- [aula-06] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-24T12:10:00.629-03:00  WARN 13432 --- [aula-06] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-24T12:10:00.717-03:00 DEBUG 13432 --- [aula-06] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 11 mappings in 'requestMappingHandlerMapping'
+2024-03-24T12:10:00.785-03:00 DEBUG 13432 --- [aula-06] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-03-24T12:10:00.818-03:00 DEBUG 13432 --- [aula-06] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-03-24T12:10:00.859-03:00 DEBUG 13432 --- [aula-06] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-03-24T12:10:00.988-03:00  INFO 13432 --- [aula-06] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-03-24T12:10:01.023-03:00  INFO 13432 --- [aula-06] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-24T12:10:01.029-03:00  INFO 13432 --- [aula-06] [restartedMain] org.aula06.lombok.Aula06Application      : Started Aula06Application in 4.796 seconds (process running for 5.515)
+2024-03-24T12:10:01.032-03:00  INFO 13432 --- [aula-06] [restartedMain] org.aula06.lombok.Aula06Application      : Application started...
+2024-03-24T12:10:35.010-03:00  INFO 13432 --- [aula-06] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-24T12:10:35.010-03:00  INFO 13432 --- [aula-06] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-24T12:10:35.010-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-03-24T12:10:35.010-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-03-24T12:10:35.010-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-03-24T12:10:35.011-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@3a81e8fe
+2024-03-24T12:10:35.012-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@5fd6487
+2024-03-24T12:10:35.012-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-03-24T12:10:35.012-03:00  INFO 13432 --- [aula-06] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-03-24T12:10:35.021-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2024-03-24T12:10:35.028-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-03-24T12:10:35.040-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2024-03-24T12:10:35.046-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource .]
+2024-03-24T12:10:35.047-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2024-03-24T12:10:35.053-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2024-03-24T12:10:35.056-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2024-03-24T12:10:35.082-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2024-03-24T12:10:35.086-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2024-03-24T12:10:35.317-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/favicon.ico", parameters={}
+2024-03-24T12:10:35.324-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-03-24T12:10:35.326-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-2] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2024-03-24T12:10:35.326-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-03-24T12:10:35.327-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2024-03-24T12:10:35.327-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2024-03-24T12:10:35.327-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2024-03-24T12:10:35.356-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [image/avif, image/webp, image/apng, image/svg+xml, image/*, */*;q=0.8] and supported [application/json, application/*+json]
+2024-03-24T12:10:35.359-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Sun Mar 24 12:10:35 BRT 2024, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
+2024-03-24T12:10:35.407-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2024-03-24T12:10:54.740-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/employee", parameters={}
+2024-03-24T12:10:54.741-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-03-24T12:10:54.743-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-3] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2024-03-24T12:10:54.743-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/employee.]
+2024-03-24T12:10:54.744-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2024-03-24T12:10:54.744-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2024-03-24T12:10:54.745-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2024-03-24T12:10:54.752-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-3] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2024-03-24T12:10:54.753-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2024-03-24T12:11:02.291-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/employee/1", parameters={}
+2024-03-24T12:11:02.292-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-03-24T12:11:02.295-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-4] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2024-03-24T12:11:02.295-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/employee/1.]
+2024-03-24T12:11:02.295-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2024-03-24T12:11:02.295-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2024-03-24T12:11:02.296-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2024-03-24T12:11:02.306-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-4] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2024-03-24T12:11:02.307-03:00 DEBUG 13432 --- [aula-06] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
