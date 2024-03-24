@@ -1,9 +1,11 @@
-package org.aula07.beans_validation.controller;
+package org.aula08.java_faker.controller;
 
-import org.aula07.beans_validation.module.Employee;
-import org.aula07.beans_validation.module.Project;
-import org.aula07.beans_validation.repository.EmployeeRepository;
-import org.aula07.beans_validation.repository.ProjectRepository;
+import com.github.javafaker.Faker;
+import org.apache.commons.lang3.StringUtils;
+import org.aula08.java_faker.module.Employee;
+import org.aula08.java_faker.module.Project;
+import org.aula08.java_faker.repository.EmployeeRepository;
+import org.aula08.java_faker.repository.ProjectRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.HashSet;
 import java.util.List;
+import java.util.Locale;
 import java.util.Set;
 
 @RestController
@@ -21,6 +24,16 @@ public class EmployeeController {
     private EmployeeRepository employeeRepository;
     @Autowired
     private ProjectRepository projectRepository;
+
+    @PostMapping(value = "/generateFakeEmployee/")
+    public String generateFakerEmployee(){
+        log.info("Create a new Employee using JavaFaker data.\n");
+        Faker usFaker = new Faker(new Locale("en-US"));
+        Employee employee = new Employee(usFaker.name().fullName(), usFaker.internet().emailAddress(), StringUtils.capitalize(usFaker.company().profession()));
+        employeeRepository.save(employee);
+        log.info("Saved employee:\t"+employee+"\n");
+        return "Employee saved";
+    }
     @PostMapping(value = "/createEmployee/")
     public String createEmployee(@RequestBody Employee entity){
         log.info("Create a new Employee.\n");

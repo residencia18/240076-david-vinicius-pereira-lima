@@ -1,4 +1,4 @@
-package org.aula07.beans_validation.module;
+package org.aula08.java_faker.module;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;

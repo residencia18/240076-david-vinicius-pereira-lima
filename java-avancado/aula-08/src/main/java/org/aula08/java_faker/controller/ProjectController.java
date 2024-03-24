@@ -1,13 +1,13 @@
-package org.aula07.beans_validation.controller;
+package org.aula08.java_faker.controller;
 
+import org.aula08.java_faker.module.Employee;
+import org.aula08.java_faker.module.Project;
+import org.aula08.java_faker.repository.EmployeeRepository;
+import org.aula08.java_faker.repository.ProjectRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.aula07.beans_validation.module.Project;
-import org.aula07.beans_validation.module.Employee;
-import org.aula07.beans_validation.repository.ProjectRepository;
-import org.aula07.beans_validation.repository.EmployeeRepository;
 
 import java.util.HashSet;
 import java.util.Set;
