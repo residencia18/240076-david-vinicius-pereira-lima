@@ -1,5 +1,7 @@
 package org.aula08.java_faker.controller;
 
+import com.github.javafaker.Faker;
+import org.apache.commons.lang3.StringUtils;
 import org.aula08.java_faker.module.Employee;
 import org.aula08.java_faker.module.Project;
 import org.aula08.java_faker.repository.EmployeeRepository;
@@ -10,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashSet;
+import java.util.Locale;
 import java.util.Set;
 
 @RestController
@@ -21,7 +24,17 @@ public class ProjectController {
     private ProjectRepository projectRepository;
     @Autowired
     private EmployeeRepository employeeRepository;
-    @PostMapping("/createProject")
+
+    @PostMapping("/createFakeProject/")
+    public String createFakeProject(){
+        Faker usFaker = new Faker(new Locale("en-US"));
+        log.info("Create a new Project using JavaFaker.");
+        Project project = new Project(StringUtils.capitalize(usFaker.app().name()),StringUtils.capitalize(usFaker.company().industry()));
+        project = projectRepository.save(project);
+        log.info("Saved Project:\t"+project+"\n");
+        return "Project saved!!!";
+    }
+    @PostMapping("/createProject/")
     public String createProject(@RequestBody Project entity){
         log.info("Create a new Project.");
         Project project = new Project(entity.getProjectName(), entity.getTechnologyUsed());
@@ -29,7 +42,7 @@ public class ProjectController {
         log.info("Saved Project:\t"+project+"\n");
         return "Project saved!!!";
     }
-    @PostMapping("/createProjectForEmployees")
+    @PostMapping("/createProjectForEmployees/")
     public String createProjectForEmployees(@RequestBody Project entity){
         log.info("Create a new Project and add existing Employees into this Project.");
         int empId = 1;
