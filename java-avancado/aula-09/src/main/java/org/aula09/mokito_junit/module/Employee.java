@@ -1,4 +1,4 @@
-package org.aula08.java_faker.module;
+package org.aula09.mokito_junit.module;
 
 import jakarta.persistence.*;
 import lombok.*;

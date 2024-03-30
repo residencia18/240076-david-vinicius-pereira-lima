@@ -1,11 +1,11 @@
-package org.aula08.java_faker.controller;
+package org.aula09.mokito_junit.controller;
 
 import com.github.javafaker.Faker;
 import org.apache.commons.lang3.StringUtils;
-import org.aula08.java_faker.module.Employee;
-import org.aula08.java_faker.module.Project;
-import org.aula08.java_faker.repository.EmployeeRepository;
-import org.aula08.java_faker.repository.ProjectRepository;
+import org.aula09.mokito_junit.module.Employee;
+import org.aula09.mokito_junit.module.Project;
+import org.aula09.mokito_junit.repository.EmployeeRepository;
+import org.aula09.mokito_junit.repository.ProjectRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
