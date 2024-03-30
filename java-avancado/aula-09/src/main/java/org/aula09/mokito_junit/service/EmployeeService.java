@@ -13,7 +13,7 @@ public class EmployeeService {
     }
 
     public Employee create(Employee employee){
-        return this.employeeRepository.save(employee);
+        return employeeRepository.save(employee);
     }
 
     public Optional<Employee> update(Integer employeeId, Employee updatedEmployee){
