@@ -1,49 +1,39 @@
 import { Component, OnInit } from '@angular/core';
 import { GetPaisesService } from '../get-paises.service';
-import { Pais } from '../models/pais.model';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-paises-json',
   templateUrl: './paises-json.component.html',
   styleUrl: './paises-json.component.css'
 })
-export class PaisesJsonComponent implements OnInit{
-  
-  paisForm : FormGroup;
+export class PaisesJsonComponent implements OnInit {
 
-  ngOnInit(){
-    this.onInit();
-  }
-  
-  constructor(private getPaises : GetPaisesService){
-    this.paisForm = new FormGroup({
-      tipo:new FormControl(null,[Validators.required]),
-      nome:new FormControl(null,[Validators.required]),
-      rotulo:new FormControl(null,[Validators.required]),
-    })
+  camposForm: any[] = [];
+  formPais: FormGroup = new FormGroup({});
 
-    this.paisForm.valueChanges.subscribe(
-      (value)=>{
-        console.log(value);
-      }
-    );
-  }
+  constructor(private formBuilder : FormBuilder, private getPaisesService: GetPaisesService) { }
 
-  onInit(){
-    const pais = new Pais(
-      this.paisForm.value.tipo,
-      this.paisForm.value.nome,
-      this.paisForm.value.rotulo
-    );
-    this.getPaises.getFirstPais().subscribe(
-      (response)=>{
-        console.log(response);
+  ngOnInit(): void {
+    this.getPaisesService.getFirstPais().subscribe(
+      camposForm => {
+        this.camposForm = camposForm;
+        this.camposForm.forEach(campo => {
+          this.formPais.addControl(campo.nome, this.formBuilder.control('', Validators.required));
+        });
+
       },
-      (error)=>{
+      error => {
         console.log(error);
+      });
+    }
+
+    onSubmit(){
+      if(this.formPais.valid){
+        console.log(this.formPais.value);
+      } else {
+        console.log("Formulário inválido");
       }
-    );
-  }
+    }
   
 }

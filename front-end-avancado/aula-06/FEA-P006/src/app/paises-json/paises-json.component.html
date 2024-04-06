@@ -1,1 +1,11 @@
-<button (click)="onInit()">GET</button>
+<form [formGroup]=" formPais" (ngSubmit)="onSubmit()">
+    <div *ngFor="let campo of camposForm">
+      <label for="{{ campo.nome }}">{{ campo.rotulo }}</label>
+      <input type="{{ campo.tipo }}" id="{{ campo.nome }}" formControlName="{{ campo.nome }}" />
+      <div *ngIf=" formPais.get(campo.nome)?.invalid &&  formPais.get(campo.nome)?.touched">
+        <small class="text-danger">Campo obrigatório</small>
+      </div>
+    </div>
+    <button type="submit" [disabled]=" formPais.invalid">Enviar</button>
+  </form>
+  

@@ -1,18 +1,26 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Pais } from './models/pais.model';
+import { Observable, map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GetPaisesService {
 
-  constructor(private http : HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  getFirstPais(){
-    return this.http.get<Pais[]>("https://restcountries.com/v3.1/all");
+  getFirstPais() : Observable<any>{
+    return this.http.get<any>("https://restcountries.com/v3.1/all").pipe(
+      map(resp => {
+        const pais = resp[0];
+        const camposForm = Object.keys(pais).map(key => ({
+          tipo: 'text',
+          nome: key,
+          rotulo: key
+        }));
+        return camposForm;
+      }))
   }
-
-
 }
+
+
