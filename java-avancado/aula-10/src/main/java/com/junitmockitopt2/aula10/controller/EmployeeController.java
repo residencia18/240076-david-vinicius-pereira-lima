@@ -1,28 +1,30 @@
 package com.junitmockitopt2.aula10.controller;
 
 import com.github.javafaker.Faker;
+import com.junitmockitopt2.aula10.module.Employee;
+import com.junitmockitopt2.aula10.module.Project;
+import com.junitmockitopt2.aula10.repository.EmployeeRepository;
+import com.junitmockitopt2.aula10.repository.ProjectRepository;
+import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
-import org.aula09.mokito_junit.module.Employee;
-import org.aula09.mokito_junit.module.Project;
-import org.aula09.mokito_junit.repository.EmployeeRepository;
-import org.aula09.mokito_junit.repository.ProjectRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
 import java.util.Set;
-
+@RequiredArgsConstructor
 @RestController
-@RequestMapping("/api/employee")
+@RequestMapping("/api/employees")
 public class EmployeeController {
     private static final Logger log = LoggerFactory.getLogger(EmployeeController.class);
-    @Autowired
     private EmployeeRepository employeeRepository;
-    @Autowired
     private ProjectRepository projectRepository;
 
     @PostMapping(value = "/generateFakeEmployee/")
@@ -34,15 +36,13 @@ public class EmployeeController {
         log.info("Saved employee:\t"+employee+"\n");
         return "Employee saved";
     }
-    @PostMapping(value = "/createEmployee/")
-    public String createEmployee(@RequestBody Employee entity){
-        log.info("Create a new Employee.\n");
-        Employee employee = new Employee(entity.getName(), entity.getEmail(), entity.getTechnicalSkill());
-        employee = employeeRepository.save(employee);
-        log.info("Saved employee:\t"+employee+"\n");
-        return "Employee saved";
+
+    @PostMapping
+    public ResponseEntity<Employee> createEmployee(@RequestBody @Valid Employee employee){
+        Employee savedEmployee = employeeRepository.save(employee);
+        return new ResponseEntity<>(savedEmployee, HttpStatus.CREATED);
     }
-    @PostMapping(value = "/createEmployees/")
+    @PostMapping(value = "/{projId}/assign")
     public String createEmployee(@RequestBody List<Employee> entitys){
         log.info("Create a new Employee.\n");
         for (Employee entity : entitys) {

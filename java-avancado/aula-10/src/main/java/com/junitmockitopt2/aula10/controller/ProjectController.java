@@ -1,11 +1,11 @@
 package com.junitmockitopt2.aula10.controller;
 
 import com.github.javafaker.Faker;
+import com.junitmockitopt2.aula10.module.Employee;
+import com.junitmockitopt2.aula10.module.Project;
+import com.junitmockitopt2.aula10.repository.EmployeeRepository;
+import com.junitmockitopt2.aula10.repository.ProjectRepository;
 import org.apache.commons.lang3.StringUtils;
-import org.aula09.mokito_junit.module.Employee;
-import org.aula09.mokito_junit.module.Project;
-import org.aula09.mokito_junit.repository.EmployeeRepository;
-import org.aula09.mokito_junit.repository.ProjectRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
