@@ -31,11 +31,15 @@ public class ProjectService {
     }
 
     public Optional<Project> update(Integer projectId, Project updatedProject){
-        Optional<Project> existingProject = projectRepository.findById(projectId);
-        if (existingProject.isPresent()){
-            updatedProject.setId(projectId);
-            return Optional.of(projectRepository.save(updatedProject));
-        }
-        return Optional.empty();
+        return projectRepository.findById(projectId).
+                map(project -> {
+                    project.setProjectName(updatedProject.getProjectName());
+                    project.setTechnologyUsed(updatedProject.getTechnologyUsed());
+                    return projectRepository.save(project);
+                });
+    }
+
+    public void deleteById(Integer id){
+        projectRepository.deleteById(id);
     }
 }
