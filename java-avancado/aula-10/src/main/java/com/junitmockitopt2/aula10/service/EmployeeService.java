@@ -15,6 +15,13 @@ public class EmployeeService {
     public List<Employee> findAll(){
         return employeeRepository.findAll();
     }
+    public Optional<Employee> findById(Integer id){
+        return employeeRepository.findById(id);
+    }
+
+    public Optional<Employee> findByName(String name){
+        return employeeRepository.findByName(name);
+    }
 
     public EmployeeService(EmployeeRepository employeeRepository) {
         this.employeeRepository = employeeRepository;
@@ -25,11 +32,16 @@ public class EmployeeService {
     }
 
     public Optional<Employee> update(Integer employeeId, Employee updatedEmployee){
-        Optional<Employee> existingEmployee = employeeRepository.findById(employeeId);
-        if(existingEmployee.isPresent()){
-            updatedEmployee.setId(employeeId);
-            return Optional.of(employeeRepository.save(updatedEmployee));
-        }
-        return Optional.empty();
+        return employeeRepository.findById(employeeId).
+                map(employee -> {
+                    employee.setName(updatedEmployee.getName());
+                    employee.setEmail(updatedEmployee.getEmail());
+                    employee.setTechnicalSkill(updatedEmployee.getTechnicalSkill());
+                    return employeeRepository.save(employee);
+                });
+    }
+
+    public void deleteEmployee(Integer id){
+        employeeRepository.deleteById(id);
     }
 }
