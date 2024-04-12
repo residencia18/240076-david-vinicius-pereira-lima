@@ -1,6 +1,7 @@
-package org.aula04.aula04_car.module.test;
+package org.aula04.aula04_car.service;
 
-import org.aula03.test_swagger.module.Carro;
+
+import org.aula04.aula04_car.module.Carro;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
