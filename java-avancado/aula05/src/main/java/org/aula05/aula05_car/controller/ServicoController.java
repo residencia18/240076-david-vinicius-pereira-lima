@@ -7,7 +7,6 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.aula04.aula04_car.controller.dto.ServicoDTO;
 import org.aula04.aula04_car.controller.form.ServicoForm;
 import org.aula04.aula04_car.module.Servico;
-import org.aula04.aula04_car.repository.ConcessionariaRepository;
 import org.aula04.aula04_car.repository.ServicoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -25,8 +24,6 @@ import java.util.List;
 public class ServicoController {
     @Autowired
     private ServicoRepository servicoRepository;
-    @Autowired
-    private ConcessionariaRepository concessionariaRepository;
 
     @Operation(summary = "Retorna lista de todas os Serviços", method = "GET")
     @ApiResponses(value = {
@@ -82,12 +79,6 @@ public class ServicoController {
             return ResponseEntity.badRequest().build();
         }
         return null;
-    }
-
-    @PostMapping(value="/inserirServicoConcessionaria/{concId}", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public String inserirServicoEmConcessionaria(@PathVariable(name = "concId") Integer concId){
-        System.out.println("Associando um Serviço existente a uma Concessionária existente");
-
     }
     @Operation(summary = "Atualizar serviço", method = "PUT")
     @ApiResponses(value = {
