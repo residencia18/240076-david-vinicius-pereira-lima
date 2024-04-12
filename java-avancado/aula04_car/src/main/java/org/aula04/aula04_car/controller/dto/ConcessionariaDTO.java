@@ -1,13 +1,10 @@
 package org.aula04.aula04_car.controller.dto;
 
-import org.aula03.test_swagger.module.Carro;
-import org.aula03.test_swagger.module.Concessionaria;
+import org.aula04.aula04_car.module.Concessionaria;
 
-import java.util.List;
 
 public class ConcessionariaDTO {
     private String nome;
-    private List<Carro> carros;
 
     public ConcessionariaDTO() {
     }
@@ -20,14 +17,11 @@ public class ConcessionariaDTO {
         return nome;
     }
 
-    public List<Carro> getCarros() {
-        return carros;
+    public void setNome(String nome){
+        this.nome = nome;
     }
+
     public String toString(){
-        String str = "";
-        for(Carro carro : carros)
-            str += carro.toString();
-        return "Concessionária: "+nome+
-                "\nCarros:\n"+str;
+        return "Concessionária: "+nome;
     }
 }

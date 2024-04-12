@@ -1,14 +1,14 @@
 package org.aula04.aula04_car.controller;
 
+
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import org.aula03.test_swagger.controller.dto.CarroDTO;
-import org.aula03.test_swagger.controller.dto.ConcessionariaDTO;
-import org.aula03.test_swagger.controller.form.ConcessionariaForm;
-import org.aula03.test_swagger.module.Concessionaria;
-import org.aula03.test_swagger.repository.ConcessionariaRepository;
+import org.aula04.aula04_car.controller.dto.ConcessionariaDTO;
+import org.aula04.aula04_car.controller.form.ConcessionariaForm;
+import org.aula04.aula04_car.module.Concessionaria;
+import org.aula04.aula04_car.repository.ConcessionariaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -113,8 +113,6 @@ public class ConcessionariaController {
                 Concessionaria concessionaria = concessionariaRepository.getReferenceById(id);
                 if(cf.getNome()!=null)
                     concessionaria.setNome(cf.getNome());
-                if(cf.getCarros()!=null)
-                    concessionaria.setCarros(cf.getCarros());
                 concessionariaRepository.save(concessionaria);
                 ConcessionariaDTO concessionariaDTO = new ConcessionariaDTO(concessionaria);
                 return ResponseEntity.ok(concessionariaDTO);

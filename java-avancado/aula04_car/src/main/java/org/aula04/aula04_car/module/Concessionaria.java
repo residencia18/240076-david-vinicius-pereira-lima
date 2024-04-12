@@ -16,8 +16,7 @@ public class Concessionaria {
     @Column(name = "nome")
     private String nome;
 
-    @Column(name = "carros")
-    @OneToMany
+    @OneToMany(mappedBy = "concessionaria")
     private List<Carro> carros;
 
     @Column(name = "servicos")

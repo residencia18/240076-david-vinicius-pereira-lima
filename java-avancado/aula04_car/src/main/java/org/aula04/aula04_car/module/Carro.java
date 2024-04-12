@@ -21,14 +21,19 @@ public class Carro {
     @Column(name = "anoFabricacao")
     private Integer anoFabricacao;
 
+    @ManyToOne
+    @JoinColumn(name = "concessionaria_id")
+    private Concessionaria concessionaria;
+
     public Carro() {}
 
-    public Carro(Long id, String placa, String marca, String modelo, Integer anoFabricacao) throws Exception {
+    public Carro(Long id, String placa, String marca, String modelo, Integer anoFabricacao, Concessionaria concessionaria) throws Exception {
         this.id = id;
         this.setPlaca(placa);
         this.setMarca(marca);
         this.modelo = modelo;
         this.setAnoFabricacao(anoFabricacao);
+        this.concessionaria = concessionaria;
     }
 
     public Long getId() {
@@ -94,6 +99,14 @@ public class Carro {
             throw new Exception("Ano de fabricação acima de 2999");
         else
             this.anoFabricacao = anoFabricacao;
+    }
+
+    public Concessionaria getConcessionaria() {
+        return concessionaria;
+    }
+
+    public void setConcessionaria(Concessionaria concessionaria) {
+        this.concessionaria = concessionaria;
     }
 
     public String toString(){

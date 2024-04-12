@@ -1,16 +1,14 @@
 package org.aula04.aula04_car.controller.form;
 
-import org.aula03.test_swagger.module.Carro;
-import org.aula03.test_swagger.module.Concessionaria;
+import org.aula04.aula04_car.module.Carro;
+import org.aula04.aula04_car.module.Concessionaria;
 
 import java.util.List;
 
 public class ConcessionariaForm {
     private String nome;
-    private List<Carro> carros;
 
-    public ConcessionariaForm() {
-    }
+    public ConcessionariaForm() {}
 
     public String getNome() {
         return nome;
@@ -18,14 +16,6 @@ public class ConcessionariaForm {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public List<Carro> getCarros() {
-        return carros;
-    }
-
-    public void setCarros(List<Carro> carros) {
-        this.carros = carros;
     }
 
     public Concessionaria criarConcessionaria(){
