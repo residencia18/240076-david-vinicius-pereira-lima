@@ -10,6 +10,10 @@ public class ConcessionariaForm {
 
     public ConcessionariaForm() {}
 
+    public ConcessionariaForm(String nome){
+        this.nome = nome;
+    }
+
     public String getNome() {
         return nome;
     }

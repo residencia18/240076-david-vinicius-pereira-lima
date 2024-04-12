@@ -28,7 +28,8 @@ public class Servico {
 
     public Servico() {}
 
-    public Servico(String descricao, Integer duracao, Long preco) {
+    public Servico(Long id, String descricao, Integer duracao, Long preco) {
+        this.id = id;
         this.descricao = descricao;
         this.duracao = duracao;
         this.preco = preco;
