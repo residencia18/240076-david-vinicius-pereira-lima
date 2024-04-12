@@ -81,7 +81,8 @@ public class ConcessionariaController {
             return ResponseEntity.badRequest().build();
         }
         return null;
-    }@Operation(summary = "Inserir nova lista de concessionárias", method = "POST")
+    }
+    @Operation(summary = "Inserir nova lista de concessionárias", method = "POST")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Concessionárias cadastradas com sucesso"),
             @ApiResponse(responseCode = "400", description = "Concessionárias não foram cadastradas")
