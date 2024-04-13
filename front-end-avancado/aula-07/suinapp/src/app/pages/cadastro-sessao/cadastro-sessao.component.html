@@ -1,0 +1,41 @@
+<div class="p-fluid p-grid p-justify-center">
+    <div class="p-col-12 p-md-6">
+        <div class="card" style="margin-top: 2em;">
+            <p-panel header="Cadastro Sessão">
+                <p-messages [(value)]="msgs"></p-messages>
+                <form [formGroup]="sessaoForm" (ngSubmit)="onSubmit()">
+                    <div class="p-fluid p-formgrid p-grid">
+                        <div class="p-field p-col-12 p-md-6">
+                            <label for="data">Data da Sessão</label>
+                            <p-calendar id="data" dateFormat="dd/mm/yy" formControlName="data"
+                                [showIcon]="true"></p-calendar>
+                            <small *ngIf="sessaoForm.get('data')?.hasError('required') && sessaoForm.get('data')?.touched"
+                                class="p-error">Data é obrigatória</small>
+                            <small *ngIf="sessaoForm.get('data')?.hasError('pattern')" class="p-error">Data deve estar
+                                no formato dd/mm/aaaa</small>
+                        </div>
+
+                        <div class="p-field p-col-12 p-md-6">
+                            <label for="descricao">Descrição</label>
+                            <input id="descricao" type="text" formControlName="descricao" pInputText>
+                            <small *ngIf="sessaoForm.get('descricao')?.hasError('required') && sessaoForm.get('descricao')?.touched"
+                                class="p-error">Descrição é obrigatória</small>
+                        </div>
+
+                        <div class="p-field p-col-12 p-md-6">
+                            <label for="brincos">Brinco dos Suínos</label>
+                            <p-multiSelect formControlName="brincos" [options]="pigValues"  optionLabel="name" placeholder="Selecione os Brincos"></p-multiSelect>
+                        </div>
+                        
+                        <div class="p-field p-col-12 p-md-6">
+                            <label for="tarefas">Tarefas</label>
+                            <p-multiSelect formControlName="tarefas" [options]="taskValues"  optionLabel="name" placeholder="Selecione as Tarefas"></p-multiSelect>
+                        </div>
+                    </div>
+                    <button pButton type="submit" label="Cadastrar" class="p-button-success"
+                        [disabled]="sessaoForm.invalid"></button>
+                </form>
+            </p-panel>
+        </div>
+    </div>
+</div>

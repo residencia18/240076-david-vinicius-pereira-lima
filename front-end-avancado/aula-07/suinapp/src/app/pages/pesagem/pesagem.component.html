@@ -1,0 +1,27 @@
+<div class="container">
+    <p-panel>
+        <p-header class="header-container">
+            <i class="pi pi-chart-line header-icon" style="font-size: 1.5em"></i>
+            <h5  class="header-title">Gráfico de Pesos</h5>
+        </p-header>
+        <div class="p-grid">
+            <div class="p-col-12 p-md-6 p-lg-4">
+                <p-chart type="line" [data]="chartData" [options]="chartOptions" *ngIf="hasWeight"></p-chart>
+            </div>
+            <div class="p-col-12 p-md-6 p-lg-8">
+                <div class="p-message p-message-info" *ngIf="hasWeight">
+                    <i class="pi pi-info
+                    -circle"></i>
+                    <span>Clique nos pontos do gráfico para editar o peso.</span>
+                </div>
+                <div *ngIf="!hasWeight" class="p-message p-message-info">
+                    <p-button label="Registrar Peso" routerLink="/cadastro-peso/{{id}}"
+                        class="p-button-warning"></p-button>
+                    <i class="pi pi-info
+                    -circle"></i>
+                    <span>Não há pesos registrados para este suíno.</span>
+                </div>
+            </div>
+        </div>
+    </p-panel>
+</div>

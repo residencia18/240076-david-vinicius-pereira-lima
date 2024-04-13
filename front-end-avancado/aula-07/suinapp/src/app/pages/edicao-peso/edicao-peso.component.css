@@ -1,0 +1,21 @@
+.p-formgrid {
+    padding: 1em;
+  }
+  .p-field {
+    margin-bottom: 1em;
+  }
+  
+  .card {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+  }
+
+  #brinco {
+    background-color: #f9f9f9;
+    border: 1px solid #f0f0f0;
+  }
+  

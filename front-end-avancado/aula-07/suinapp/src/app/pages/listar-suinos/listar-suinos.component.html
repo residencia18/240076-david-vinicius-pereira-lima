@@ -1,0 +1,73 @@
+<div class="table-container">
+    <p-table [value]="suinos" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[5, 10, 20]">
+      <ng-template pTemplate="header">
+        <tr>
+        <th>
+            <div>
+                Brinco
+            </div>
+        </th>
+          <th>
+            <div class="filter-container">
+              <label for="fatherFilter">Brinco do Pai</label>
+              <input id="fatherFilter" pInputText type="text" placeholder="Filtrar por pai" (input)="filter($event, 'father')">
+            </div>
+          </th>
+          <th>
+            <div class="filter-container">
+              <label for="motherFilter">Brinco da Mãe</label>
+              <input id="motherFilter" pInputText type="text" placeholder="Filtrar por mãe" (input)="filter($event, 'mother')">
+            </div>
+          </th>
+          <th>
+            <div class="filter-container">
+              <label for="birthFilter">Data de Nascimento</label>
+              <input id="birthFilter" pInputText type="text" placeholder="Filtrar por data de nascimento" (input)="filter($event, 'birth')">
+            </div>
+          </th>
+          <th>
+            <div class="filter-container">
+              <label for="exitFilter">Data da Saída</label>
+              <input id="exitFilter" pInputText type="text" placeholder="Filtrar por data de saída" (input)="filter($event, 'exit')">
+            </div>
+          </th>
+          <th>
+            <div class="filter-container">
+              <label for="sexFilter">Sexo</label>
+              <input id="sexFilter" pInputText type="text" placeholder="Filtrar por sexo" (input)="filter($event, 'sex')">
+            </div>
+          </th>
+          <th>
+            <div class="filter-container">
+              <label for="statusFilter">Status</label>
+              <input id="statusFilter" pInputText type="text" placeholder="Filtrar por status" (input)="filter($event, 'status')">
+            </div>
+          </th>
+          <th>
+            <div>
+              Idade
+            </div>
+          </th>
+          <th>Opções</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-suino>
+        <tr>
+          <td> <strong>{{ suino.id }} </strong></td>
+          <td>{{ suino.father }}</td>
+          <td>{{ suino.mother }}</td>
+          <td>{{ suino.birth | date: 'dd/MM/yyyy' }}</td>
+          <td>{{ suino.exit | date: 'dd/MM/yyyy' }}</td>
+          <td>{{ suino.sex }}</td>
+          <td>{{ suino.status }}</td>
+          <td>{{ suino.birth | calcularIdadeMeses }}</td>
+          <td class="botoes">
+            <p-button routerLink="/pesagem/{{ suino.id }}" label="Pesagem" severity="warning"></p-button>
+            <p-button routerLink="/editar-suino/{{ suino.key }}" label="Editar" class="p-button-success"></p-button>
+            <p-button (click)="excluirSuino(suino.key)" label="Excluir" severity="danger"></p-button>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+  

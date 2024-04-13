@@ -1,0 +1,30 @@
+.card {
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.app-logo {
+  width: 50%;
+}
+
+.p-card-header {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.p-field {
+  margin-bottom: 20px;
+}
+
+.p-grid {
+  margin-top: 20px;
+}
+
+.submit-buttons {
+  display: flex;
+  justify-content: space-between;
+}
