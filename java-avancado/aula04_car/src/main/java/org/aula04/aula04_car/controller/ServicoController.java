@@ -6,6 +6,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.aula04.aula04_car.controller.dto.ServicoDTO;
 import org.aula04.aula04_car.controller.form.ServicoForm;
+import org.aula04.aula04_car.module.Concessionaria;
 import org.aula04.aula04_car.module.Servico;
 import org.aula04.aula04_car.repository.ConcessionariaRepository;
 import org.aula04.aula04_car.repository.ServicoRepository;
@@ -17,7 +18,9 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @RestController
 @RequestMapping(value = "/api/servico/", produces = {"application/json"})
@@ -83,12 +86,40 @@ public class ServicoController {
         }
         return null;
     }
-
-    @PostMapping(value="/inserirServicoConcessionaria/{concId}", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public String inserirServicoEmConcessionaria(@PathVariable(name = "concId") Integer concId){
+    @Operation(summary = "Criar serviço para a concessionaria", method = "POST")
+    @PostMapping(value="/criarServicoConcessionaria/{concId}", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public String criarServicoEmConcessionaria(@RequestBody Servico entity, @PathVariable(name = "concId") Integer concId){
         System.out.println("Associando um Serviço existente a uma Concessionária existente");
-
+        Servico servico =  new Servico(entity.getDescricao(), entity.getDuracao(), entity.getPreco());
+        servicoRepository.save(servico);
+        System.out.println("Serviço salvo:\t"+servico+"\n");
+        Concessionaria concessionaria = this.concessionariaRepository.getReferenceById(Long.valueOf(concId));
+        System.out.println("Detalhes concessionaria:\t"+concessionaria.toString()+"\n");
+        Set<Servico> servicos = new HashSet<>();
+        servicos.add(servico);
+        concessionaria.setServicos(servicos);
+        concessionaria = concessionariaRepository.save(concessionaria);
+        System.out.println("Serviço adicionado á concessionária");
+        return "Serviço salvo";
     }
+    @Operation(summary = "Associar serviço com concessionária", method = "POST")
+    @PostMapping(value = "/associarServicoConcessionaria/{concId}/{servId}")
+    public String associarServicoConcessionaria(@PathVariable(name = "concId") Long concId, @PathVariable (name = "servId") Long servId){
+        System.out.println("Associando um Serviço existente a uma Concessinária existente");
+        Servico servico = this.servicoRepository.getReferenceById(servId);
+        System.out.println("Detalhes do serviço:\t"+servico.toString()+"\n");
+
+        Concessionaria concessionaria = this.concessionariaRepository.getReferenceById(concId);
+        System.out.println("Detalhes da concessionária:\t"+concessionaria.toString()+"\n");
+
+        Set<Servico>servicos = new HashSet<>();
+        servicos.add(servico);
+        concessionaria.setServicos(servicos);
+        concessionaria = concessionariaRepository.save(concessionaria);
+        System.out.println("Serviço adicionado á concessionária");
+        return "Serviço salvo";
+    }
+
     @Operation(summary = "Atualizar serviço", method = "PUT")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Atualização do serviço feita com sucesso"),

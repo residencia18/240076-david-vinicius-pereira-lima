@@ -37,5 +37,5 @@ public class ServicoForm {
         this.preco = preco;
     }
 
-    public Servico criarServico(){return new Servico(null, descricao, duracao, preco);}
+    public Servico criarServico(){return new Servico(descricao, duracao, preco);}
 }

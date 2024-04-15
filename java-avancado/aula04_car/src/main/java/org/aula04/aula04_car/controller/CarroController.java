@@ -7,7 +7,9 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.aula04.aula04_car.controller.dto.CarroDTO;
 import org.aula04.aula04_car.controller.form.CarroForm;
 import org.aula04.aula04_car.module.Carro;
+import org.aula04.aula04_car.module.Concessionaria;
 import org.aula04.aula04_car.repository.CarroRepository;
+import org.aula04.aula04_car.repository.ConcessionariaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +19,9 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @RestController
 @RequestMapping(value = "api/carro/", produces = {"application/json"})
@@ -25,6 +29,8 @@ import java.util.List;
 public class CarroController {
     @Autowired
     private CarroRepository carroRepository;
+    @Autowired
+    private ConcessionariaRepository concessionariaRepository;
     @Operation(summary = "Retorna uma lista de todos os carros do banco de dados", method = "GET")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Lista retornada com sucesso!"),
@@ -119,6 +125,24 @@ public class CarroController {
         } catch (Exception e) {
             return ResponseEntity.badRequest().build();
         }
+    }
+
+    @Operation(summary = "Associar Carro á Concessionária", method = "POST")
+    @PostMapping(value = "/associarCarroConcessionaria/{concId}/{carId}")
+    public String associarConcessionariaServico(@PathVariable(name = "concId") Long concId, @PathVariable (name = "carId") Long carId){
+        System.out.println("Associando um Carro existente a uma Concessionária existente");
+        Carro carro = this.carroRepository.getReferenceById(carId);
+        System.out.println("Detalhes do carro:\t"+carro.toString()+"\n");
+
+        Concessionaria concessionaria = this.concessionariaRepository.getReferenceById(concId);
+        System.out.println("Detalhes da concessionária:\t"+concessionaria.toString()+"\n");
+
+        Set<Carro> carros = new HashSet<>();
+        carros.add(carro);
+        concessionaria.setCarros(carros);
+        concessionaria = concessionariaRepository.save(concessionaria);
+        System.out.println("Carro adicionado á concessionária");
+        return "Carro salvo";
     }
     @Operation(summary = "Atualizar dados do carro", method = "PUT")
     @ApiResponses(value = {
