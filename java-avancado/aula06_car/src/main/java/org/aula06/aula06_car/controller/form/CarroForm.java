@@ -1,7 +1,8 @@
 package org.aula06.aula06_car.controller.form;
 
-import org.aula05.aula05_car.module.Carro;
-import org.aula05.aula05_car.module.Concessionaria;
+
+import org.aula06.aula06_car.module.Carro;
+import org.aula06.aula06_car.module.Concessionaria;
 
 public class CarroForm {
     private String placa;
@@ -62,6 +63,6 @@ public class CarroForm {
     }
 
     public Carro criarCarro() throws Exception {
-        return new Carro(null, placa, marca, modelo, anoFabricacao, concessionaria);
+        return new Carro(placa, marca, modelo, anoFabricacao);
     }
 }

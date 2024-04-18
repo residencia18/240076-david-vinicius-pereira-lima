@@ -1,6 +1,7 @@
 package org.aula06.aula06_car.controller.form;
 
-import org.aula05.aula05_car.module.Concessionaria;
+
+import org.aula06.aula06_car.module.Concessionaria;
 
 public class ConcessionariaForm {
     private String nome;
@@ -20,6 +21,6 @@ public class ConcessionariaForm {
     }
 
     public Concessionaria criarConcessionaria(){
-        return new Concessionaria(null, nome);
+        return new Concessionaria(nome);
     }
 }

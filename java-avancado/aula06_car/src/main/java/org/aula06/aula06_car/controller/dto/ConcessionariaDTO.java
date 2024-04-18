@@ -1,7 +1,7 @@
 package org.aula06.aula06_car.controller.dto;
 
 
-import org.aula05.aula05_car.module.Concessionaria;
+import org.aula06.aula06_car.module.Concessionaria;
 
 public class ConcessionariaDTO {
     private String nome;

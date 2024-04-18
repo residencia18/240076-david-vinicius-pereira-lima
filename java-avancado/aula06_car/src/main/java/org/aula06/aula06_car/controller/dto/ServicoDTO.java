@@ -1,6 +1,7 @@
 package org.aula06.aula06_car.controller.dto;
 
-import org.aula05.aula05_car.module.Servico;
+
+import org.aula06.aula06_car.module.Servico;
 
 public class ServicoDTO {
     private String descricao;

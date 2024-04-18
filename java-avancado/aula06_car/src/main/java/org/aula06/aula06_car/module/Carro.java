@@ -1,6 +1,12 @@
 package org.aula06.aula06_car.module;
 
 import jakarta.persistence.*;
+import lombok.*;
+
+@Data
+@NoArgsConstructor
+@RequiredArgsConstructor
+
 @Entity
 @Table(name = "CARRO")
 public class Carro {
@@ -10,46 +16,23 @@ public class Carro {
     private Long id;
 
     @Column(name = "placa")
-    private String placa;
+    @NonNull private String placa;
 
     @Column(name = "marca")
-    private String marca;
+    @NonNull private String marca;
 
     @Column(name = "modelo")
-    private String modelo;
+    @NonNull private String modelo;
 
     @Column(name = "anoFabricacao")
-    private Integer anoFabricacao;
+    @NonNull private Integer anoFabricacao;
 
     @ManyToOne
     @JoinColumn(name = "concessionaria_id")
     private Concessionaria concessionaria;
 
-    public Carro() {}
-
-    public Carro(Long id, String placa, String marca, String modelo, Integer anoFabricacao, Concessionaria concessionaria) throws Exception {
-        this.id = id;
-        this.setPlaca(placa);
-        this.setMarca(marca);
-        this.modelo = modelo;
-        this.setAnoFabricacao(anoFabricacao);
-        this.concessionaria = concessionaria;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getPlaca() {
-        return placa;
-    }
-
-    public void setPlaca(String placa) throws Exception{
-        if(placa == null || placa.isEmpty())
+    public void setPlaca(String placa) throws Exception {
+        if (placa == null || placa.isEmpty())
             throw new Exception("Placa não pode estar vazia ou nula");
         else if (placa.length() != 7)
             throw new Exception("Tamanho da placa é diferente de 7");
@@ -57,10 +40,6 @@ public class Carro {
             throw new Exception("Placa não segue padrão correto");
         else
             this.placa = placa;
-    }
-
-    public String getMarca() {
-        return marca;
     }
 
     public void setMarca(String marca) throws Exception {
@@ -76,18 +55,6 @@ public class Carro {
             this.marca = marca;
     }
 
-    public String getModelo() {
-        return modelo;
-    }
-
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
-    }
-
-    public Integer getAnoFabricacao() {
-        return anoFabricacao;
-    }
-
     public void setAnoFabricacao(Integer anoFabricacao) throws Exception{
         if (anoFabricacao == null)
             throw new Exception("Ano de fabricação não pode ser nulo");
@@ -99,22 +66,6 @@ public class Carro {
             throw new Exception("Ano de fabricação acima de 2999");
         else
             this.anoFabricacao = anoFabricacao;
-    }
-
-    public Concessionaria getConcessionaria() {
-        return concessionaria;
-    }
-
-    public void setConcessionaria(Concessionaria concessionaria) {
-        this.concessionaria = concessionaria;
-    }
-
-    public String toString(){
-        return "Carro:\n"+
-                "Placa:\t"+placa+
-                "\nMarca:\t"+marca+
-                "\nModelo:\t"+modelo+
-                "\nAno de Lançamento:\t"+anoFabricacao+"\n\n";
     }
 
     public void mostrarCarro(){
