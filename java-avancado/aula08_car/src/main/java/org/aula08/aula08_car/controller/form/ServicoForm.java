@@ -9,7 +9,7 @@ import org.aula08.aula08_car.module.Servico;
 public class ServicoForm {
     private String descricao;
     private Integer duracao;
-    private Long preco;
+    private Double preco;
 
     public Servico criarServico(){return new Servico(descricao, duracao, preco);}
 }

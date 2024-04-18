@@ -5,7 +5,6 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import org.apache.commons.lang3.StringUtils;
 import org.aula08.aula08_car.controller.dto.CarroDTO;
 import org.aula08.aula08_car.controller.form.CarroForm;
 import org.aula08.aula08_car.module.Carro;
@@ -15,7 +14,6 @@ import org.aula08.aula08_car.repository.ConcessionariaRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -23,6 +21,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
+import java.time.LocalDate;
 import java.util.*;
 
 @RestController
@@ -124,7 +123,9 @@ public class CarroController {
     public String gerarCarroFaker(){
         log.info("Criar um novo carro usando JavaFaker");
         Faker usFaker = new Faker(new Locale("en-US"));
-        Carro carro = new Carro(usFaker.regexify("[A-Z]{3}\\d[A-Z]\\d{2}$"),usFaker.company().name(), usFaker.commerce().productName(), usFaker.date().birthday().getYear());
+        Random random = new Random();
+        String placa = usFaker.regexify("[A-Z]{3}\\d[A-Z]\\d{2}");
+        Carro carro = new Carro(placa, usFaker.company().name(), usFaker.commerce().productName(), random.nextInt(1960, LocalDate.now().getYear()));
         carroRepository.save(carro);
         log.info("Carro salvo:\t"+carro+"\n");
         return "Carro salvo";

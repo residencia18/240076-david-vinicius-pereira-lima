@@ -34,7 +34,7 @@ public class Servico {
 
     @Column(name = "preco")
     @PositiveOrZero(message = "Preço tem que ser maior que 0")
-    @NonNull private Long preco;
+    @NonNull private Double preco;
 
     @Column(name = "concessionarias")
     @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})

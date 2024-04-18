@@ -36,11 +36,12 @@ public class Carro {
     @Size(min = 2, message = "Tamanho do modelo menor do que o exigido")
     @NonNull private String modelo;
 
-    @Column(name = "anoFabricacao")
+
     @NotNull(message = "Ano de fabricação não pode ser nulo")
     @Positive(message = "Ano de fabricação não pode ser negativo")
     @Min(value = 1960, message = "Ano de fabricação não pode ser menor que 1960")
     @Max(value = 2999, message = "Ano de fabricação não pode ser maior que 2999")
+    @Column(name = "anoFabricacao")
     @NonNull private Integer anoFabricacao;
 
     @ManyToOne

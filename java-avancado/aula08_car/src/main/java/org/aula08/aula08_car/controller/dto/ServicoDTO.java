@@ -10,7 +10,7 @@ import org.aula08.aula08_car.module.Servico;
 public class ServicoDTO {
     private String descricao;
     private Integer duracao;
-    private Long preco;
+    private Double preco;
 
     public ServicoDTO(Servico servico){
         this.descricao = servico.getDescricao();

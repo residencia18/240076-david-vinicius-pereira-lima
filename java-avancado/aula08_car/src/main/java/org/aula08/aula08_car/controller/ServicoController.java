@@ -106,8 +106,10 @@ public class ServicoController {
         Date dataInicial = usFaker.date().future(365, TimeUnit.DAYS);
         Date dataFinal = usFaker.date().future(30, TimeUnit.DAYS, dataInicial);
         long duracaoMili = dataFinal.getTime() - dataInicial.getTime();
-        long duracao = TimeUnit.MILLISECONDS.toSeconds(duracaoMili);
-        Servico servico = new Servico(usFaker.company().bs(), (int) duracao, Long.parseLong(usFaker.commerce().price()));
+        long duracaoL = TimeUnit.MILLISECONDS.toSeconds(duracaoMili);
+        Integer duracao = (int) duracaoL;
+        Double preco =  Double.parseDouble(usFaker.commerce().price().replace(",", "."));
+        Servico servico = new Servico(usFaker.company().buzzword(), (int) duracao, preco);
         servicoRepository.save(servico);
         log.info("Serviço salvo:\t"+servico+"\n");
         return "Serviço salvo";
