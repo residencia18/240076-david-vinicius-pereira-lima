@@ -1,9 +1,9 @@
-package org.aula09.aula09_car.service;
+package org.aula09.aula09_car.test;
 
 import com.github.javafaker.Faker;
 import org.aula09.aula09_car.module.Concessionaria;
 import org.aula09.aula09_car.repository.ConcessionariaRepository;
-import org.checkerframework.checker.units.qual.C;
+import org.aula09.aula09_car.service.ConcessionariaService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;

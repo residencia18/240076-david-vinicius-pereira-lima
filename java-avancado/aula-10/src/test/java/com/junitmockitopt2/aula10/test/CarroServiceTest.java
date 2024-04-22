@@ -1,8 +1,9 @@
-package org.aula09.aula09_car.service;
+package org.aula09.aula09_car.test;
 
 import com.github.javafaker.Faker;
 import org.aula09.aula09_car.module.Carro;
 import org.aula09.aula09_car.repository.CarroRepository;
+import org.aula09.aula09_car.service.CarroService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import org.mockito.InjectMocks;
