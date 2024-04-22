@@ -3,8 +3,7 @@ package org.aula09.aula09_car.service;
 import com.github.javafaker.Faker;
 import org.aula09.aula09_car.module.Carro;
 import org.aula09.aula09_car.repository.CarroRepository;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -12,13 +11,14 @@ import org.mockito.MockitoAnnotations;
 
 import java.time.LocalDate;
 import java.util.Locale;
+import java.util.Optional;
 import java.util.Random;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 public class CarroServiceTest {
     @Mock
@@ -27,8 +27,9 @@ public class CarroServiceTest {
     private CarroService carroService;
     private Carro carro;
     private Faker faker;
+
     @BeforeEach
-    public void setUp() throws Exception {
+    public void setUp(){
         Random random = new Random();
         faker = new Faker(new Locale(("en-US")));
         carro = new Carro();
@@ -54,6 +55,24 @@ public class CarroServiceTest {
 
     @Test
     public void shouldUpdateCarroSuccessfully(){
+        Carro carroAtualizado = new Carro();
+        carroAtualizado.setPlaca("XYZ2A24");
+        carroAtualizado.setModelo("Modelo A");
+        carroAtualizado.setMarca("Marca B");
+        carroAtualizado.setAnoFabricacao(2021);
 
+        when(carroRepository.findById(carro.getId())).thenReturn(Optional.of(carro));
+        when(carroRepository.save(any(Carro.class))).thenReturn(carroAtualizado);
+
+        Optional<Carro>resultado = carroService.update(carro.getId(), carroAtualizado);
+
+        assertTrue(resultado.isPresent(), "O carro atualizado deve existir");
+        assertEquals(carroAtualizado.getPlaca(), resultado.get().getPlaca(), "A placa do carro atualizado não corresponde ao esperado");
+        assertEquals(carroAtualizado.getModelo(), resultado.get().getModelo(), "O modelo do carro atualizado não corresponde ao esperado");
+        assertEquals(carroAtualizado.getMarca(), resultado.get().getMarca(), "A marca do carro atualizado não corresponde ao esperado");
+        assertEquals(carroAtualizado.getAnoFabricacao(), resultado.get().getAnoFabricacao(), "O ano de fabricação não corresponde ao esperado");
+
+        verify(carroRepository).findById(carro.getId());
+        verify(carroRepository).save(any(Carro.class));
     }
 }
