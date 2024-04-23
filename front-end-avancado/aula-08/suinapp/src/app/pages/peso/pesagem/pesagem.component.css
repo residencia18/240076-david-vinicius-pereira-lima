@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  margin-top: 20px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  justify-content: center;
+}
+
+.header-icon {
+  margin-right: 0.5rem;
+}
+
+.header-title {
+  font-size: 1.5em;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #333;
+}
+
+p-panel {
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 80px;
+}
+
+p-chart {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.p-message {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}

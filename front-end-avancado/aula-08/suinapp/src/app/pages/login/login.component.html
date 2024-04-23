@@ -1,0 +1,71 @@
+<div class="p-fluid p-grid p-justify-center">
+  <div class="p-col-12 p-md-6">
+    <div class="card"  *ngIf="!isUserAuthenticated">
+      <div class="p-card-header">
+        <h5>{{ register ? 'Cadastro' : 'Login' }}</h5>
+        <img src="assets/suinofarm.png" alt="Logo" class="app-logo" />
+      </div>
+      <div class="p-card-body">
+        <!-- Formulário de Login/Cadastro -->
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <!-- Campo de Email -->
+          <div class="p-field">
+            <label for="email">E-mail</label>
+            <input id="email" type="text" pInputText formControlName="email" />
+            <small *ngIf="loginForm.get('email')?.hasError('required') && loginForm.get('email')?.touched" class="p-error">
+              E-mail é obrigatório.
+            </small>
+            <small *ngIf="loginForm.get('email')?.hasError('pattern') && loginForm.get('email')?.touched" class="p-error">
+              Insira um e-mail válido.
+            </small>
+          </div>
+
+          <!-- Campo de Senha -->
+          <div class="p-field">
+            <label for="password">Senha</label>
+            <input id="password" type="password" pInputText formControlName="password" />
+            <small *ngIf="loginForm.get('password')?.hasError('required')  && loginForm.get('password')?.touched" class="p-error">
+              Senha é obrigatória.
+            </small>
+            <small *ngIf="loginForm.get('password')?.hasError('minlength')  && loginForm.get('password')?.touched" class="p-error">
+              A senha deve ter no mínimo 6 caracteres.
+            </small>
+          </div>
+
+          <div class="p-field" *ngIf="register">
+            <label for="confirmPassword">Confirme a Senha</label>
+            <input id="confirmPassword" type="password" pInputText formControlName="confirmPassword" />
+            <small *ngIf="loginForm.get('password')?.value !== loginForm.get('confirmPassword')?.value && loginForm.get('confirmPassword')?.touched" class="p-error">
+              As senhas não coincidem.
+            </small>
+          </div>
+
+          <!-- Mensagem de Erro -->
+          <div *ngIf="errorMsg" class="p-message p-message-error">
+            {{ errorMsg }}
+          </div>
+
+          <!-- Botões de Ação -->
+          <div class="p-grid submit-buttons">
+            <div class="p-col-12">
+            <p-button type="submit" label="{{ register ? 'Cadastrar' : 'Entrar' }}"></p-button>
+            </div>
+            <div class="p-col-12 button-secondary">
+              <p-button type="button" severity="secondary" label="{{ register ? 'Faça login' : 'Cadastre-se' }}" (click)="alterarParaCadastro(!register)"></p-button> 
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="card" *ngIf="isUserAuthenticated">
+      <div class="p-card-header">
+        <h5>Olá, {{ userEmail }}</h5>
+      </div>
+      <div class="p-card-body">
+        <p>Seja bem-vindo ao sistema.</p>
+        <p>Seu e-mail é: {{ userEmail }}</p>
+        <p-button label="Sair" (click)="onLogout()" severity="danger"></p-button>
+    </div>
+    </div>
+  </div>
+</div>

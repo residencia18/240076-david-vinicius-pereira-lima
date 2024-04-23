@@ -1,0 +1,72 @@
+<div class="p-grid p-justify-center">
+    <div class="card" style="margin-top: 1em;">
+        <div class="card-header">
+            <h1>Lista de Sessões </h1>
+        </div>
+        <p-paginator [first]="first" [rows]="rows" [totalRecords]="sessoes ? sessoes.length : 10"
+            (onPageChange)="onPageChange($event)"></p-paginator>
+        <ng-container *ngFor="let sessao of sessoes | slice: first: first + rows">
+            <p-confirmDialog header="Confirmação" icon="pi pi-exclamation-triangle"
+                [visible]="displayConfirm"></p-confirmDialog>
+            <div class="sessao-panel">
+                <p-panel>
+                    <p-header class="card-header-2">
+                        <i class="pi pi-calendar" style="font-size: 1.5em"></i>
+                        <ng-container *ngIf="editar; else readOnlyTitle">
+                            <p-calendar [(ngModel)]="sessao.data" [showIcon]="true" [readonlyInput]="true"
+                                [dateFormat]="'dd/mm/yy'" [showTime]="false"  [style]="{'width':'100%'}" ></p-calendar>
+                            <input type="text" pInputText [(ngModel)]="sessao.descricao" >
+                        </ng-container>
+                        <ng-template #readOnlyTitle>
+                             <h5> {{ sessao.data | date: 'dd/MM/yyyy' }} - {{ sessao.descricao }} </h5>
+                        </ng-template>                       
+                        <div class="buttons">
+                            <p-button icon="pi pi-pencil" size="small" (click)="gerenciarEditar(sessao.id, true)"
+                                *ngIf="!editar"></p-button>
+                            <p-button icon="pi pi-check" size="small" (click)="confirmSalvar(sessao.id)" 
+                                *ngIf="editar"></p-button>
+                            <p-button icon="pi pi-times" size="small" (click)="gerenciarEditar(sessao.id, false)" severity="secondary"
+                                *ngIf="editar"></p-button>
+                            <p-button icon="pi pi-trash" size="small" (click)="confirmDelete(sessao.id)" severity="danger"
+                                *ngIf="!editar"></p-button>
+                        </div>
+                    </p-header>
+                    <p-table [value]="sessao.brincos">
+                        <ng-template pTemplate="header">
+                            <tr>
+                                <th>Brinco</th>
+                                <th *ngFor="let tarefa of tarefasPorBrinco[sessao.id][sessao.brincos[0]]">{{
+                                    tarefa.descricao }}</th>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="body" let-brinco>
+                            <tr>
+                                <td>{{ brinco }}</td>
+                                <td *ngFor="let tarefa of tarefasPorBrinco[sessao.id][brinco]">
+                                    <ng-container *ngIf="editar; else readOnlyView">
+                                        <!-- Modo de edição -->
+                                        <p-checkbox [(ngModel)]="tarefa.status" [binary]="true"
+                                            inputId="binary"></p-checkbox>
+                                    </ng-container>
+                                    <ng-template #readOnlyView>
+                                        <!-- Modo de visualização somente leitura -->
+                                        <i class="pi" [ngStyle]="{'color': tarefa.status ? 'green' : 'red'}"
+                                            [ngClass]="{'pi-check': tarefa.status, 'pi-times': !tarefa.status}"
+                                            *ngIf="!editar"></i>
+                                    </ng-template>
+                                </td>
+                            </tr>
+                        </ng-template>
+                    </p-table>                      
+                </p-panel>
+                <div *ngIf="editar" class="progress-container">
+                    <div class="progress-bar-container">
+                      <progress [value]="progressoTarefas" max="100" id="progress-bar"></progress>
+                      <span class="progress-value">{{ progressoTarefas | number: '1.0-0' }}%</span>
+                    </div>
+                    <div class="progress-label">Progresso das Tarefas na Sessão em {{ sessao.data | date: 'dd/MM/yyyy' }}</div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>
