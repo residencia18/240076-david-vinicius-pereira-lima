@@ -5,12 +5,15 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.RequiredArgsConstructor;
 import org.aula10.aula10_car.controller.dto.ServicoDTO;
 import org.aula10.aula10_car.controller.form.ServicoForm;
 import org.aula10.aula10_car.module.Concessionaria;
 import org.aula10.aula10_car.module.Servico;
 import org.aula10.aula10_car.repository.ConcessionariaRepository;
 import org.aula10.aula10_car.repository.ServicoRepository;
+import org.aula10.aula10_car.service.ConcessionariaService;
+import org.aula10.aula10_car.service.ServicoService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,12 +31,13 @@ import java.util.concurrent.TimeUnit;
 @Validated
 @RequestMapping(value = "/api/servico/", produces = {"application/json"})
 @Tag(name = "api-servico")
+@RequiredArgsConstructor
 public class ServicoController {
     private static Logger log = LoggerFactory.getLogger(ServicoController.class);
-    @Autowired
-    private ServicoRepository servicoRepository;
-    @Autowired
-    private ConcessionariaRepository concessionariaRepository;
+
+    private final ServicoService servicoService;
+
+    private final ConcessionariaService concessionariaService;
 
     @Operation(summary = "Retorna lista de todas os Serviços", method = "GET")
     @ApiResponses(value = {

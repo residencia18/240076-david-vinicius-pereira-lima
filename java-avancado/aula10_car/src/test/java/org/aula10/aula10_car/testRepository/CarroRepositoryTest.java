@@ -66,7 +66,6 @@ public class CarroRepositoryTest {
         assertThat(carroSalvo.getId()).isGreaterThan(0);
         assertThat(carroSalvo.getPlaca()).isEqualTo(carro.getPlaca());
         Logger log = LoggerFactory.getLogger(CarroRepositoryTest.class);
-        log.info("Placa = " + carroSalvo.getPlaca());
         assertThat(carroSalvo.getMarca()).isEqualTo(carro.getMarca());
         assertThat(carroSalvo.getModelo()).isEqualTo(carro.getModelo());
         assertThat(carroSalvo.getAnoFabricacao()).isEqualTo(carro.getAnoFabricacao());
@@ -93,6 +92,16 @@ public class CarroRepositoryTest {
 
         assertThat(foundCarro).isNotEmpty();
         assertThat(foundCarro.get().getId()).isEqualTo(persistedCarro.getId());
+    }
+
+    @Test
+    void findCarros_ByAnoGreatterThan2000_ReturnsListCarros(){
+        Carro carro = generateFakeCarro();
+        carroRepository.save(carro);
+
+        Carro getCarros = carroRepository.findByJPQL();
+
+        assertThat(getCarros).isNotNull();
     }
 
     @Test

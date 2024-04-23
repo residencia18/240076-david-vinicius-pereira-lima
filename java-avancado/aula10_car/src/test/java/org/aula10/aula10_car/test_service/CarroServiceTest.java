@@ -6,9 +6,11 @@ import org.aula10.aula10_car.repository.CarroRepository;
 import org.aula10.aula10_car.service.CarroService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.time.LocalDate;
 import java.util.Locale;
@@ -20,7 +22,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-
+@ExtendWith(MockitoExtension.class)
 public class CarroServiceTest {
     @Mock
     private CarroRepository carroRepository;

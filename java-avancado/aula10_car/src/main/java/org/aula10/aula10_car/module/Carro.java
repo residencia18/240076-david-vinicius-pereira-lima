@@ -19,7 +19,7 @@ public class Carro {
     @Column(name = "ID")
     private Long id;
 
-    @Column(name = "placa")
+    @Column(name = "placa", unique = true)
     @Size(min = 7, max = 7, message = "Tamanho da placa diferente de 7")
     @Pattern(regexp = "[A-Z]{3}\\d[A-Z]\\d{2}$", message = "Placa não segue o padrão correto")
     @NonNull private String placa;
@@ -28,7 +28,7 @@ public class Carro {
     @NotNull(message = "Marca não pode ser null")
     @NotEmpty(message = "Marca não estar em branco")
     @Size(min = 2, message = "Tamanho da marca menor do que o exigido")
-    @Pattern(regexp = "[A-Z][a-zA-Z\\s]+", message = "Marca deve conter apenas letras")
+    @Pattern(regexp = "[A-Za-z\\-&', ]+", message = "Marca deve conter apenas letras")
     @NonNull private String marca;
 
     @Column(name = "modelo")
