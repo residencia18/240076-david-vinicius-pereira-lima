@@ -1,0 +1,245 @@
+2024-04-24T01:59:08.422-03:00  INFO 20380 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : Starting CarroControllerTest using Java 21.0.2 with PID 20380 (started by david in C:\Users\david\OneDrive\Área de Trabalho\Programaçao\residencia-avancado\240076-david-vinicius-pereira-lima\java-avancado\aula11_car)
+2024-04-24T01:59:08.424-03:00  INFO 20380 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : No active profile set, falling back to 1 default profile: "default"
+2024-04-24T01:59:08.446-03:00 DEBUG 20380 --- [aula11_car] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@64b31700
+2024-04-24T01:59:11.801-03:00 DEBUG 20380 --- [aula11_car] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2024-04-24T01:59:12.265-03:00 DEBUG 20380 --- [aula11_car] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-24T01:59:12.331-03:00 DEBUG 20380 --- [aula11_car] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-24T01:59:12.377-03:00 DEBUG 20380 --- [aula11_car] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-24T01:59:12.444-03:00  INFO 20380 --- [aula11_car] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-04-24T01:59:12.445-03:00  INFO 20380 --- [aula11_car] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-04-24T01:59:12.447-03:00  INFO 20380 --- [aula11_car] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2024-04-24T01:59:12.500-03:00  INFO 20380 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : Started CarroControllerTest in 4.983 seconds (process running for 7.245)
+2024-04-24T01:59:12.904-03:00 DEBUG 20380 --- [aula11_car] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-04-24T01:59:12.915-03:00 DEBUG 20380 --- [aula11_car] [main] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2024-04-24T01:59:12.920-03:00 DEBUG 20380 --- [aula11_car] [main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/carros.]
+2024-04-24T01:59:12.954-03:00 DEBUG 20380 --- [aula11_car] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@64b31700, started on Wed Apr 24 01:59:08 BRT 2024
+2024-04-24T02:02:30.058-03:00  INFO 10492 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : Starting CarroControllerTest using Java 21.0.2 with PID 10492 (started by david in C:\Users\david\OneDrive\Área de Trabalho\Programaçao\residencia-avancado\240076-david-vinicius-pereira-lima\java-avancado\aula11_car)
+2024-04-24T02:02:30.059-03:00  INFO 10492 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : No active profile set, falling back to 1 default profile: "default"
+2024-04-24T02:02:30.088-03:00 DEBUG 10492 --- [aula11_car] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6548bb7d
+2024-04-24T02:02:32.360-03:00 DEBUG 10492 --- [aula11_car] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2024-04-24T02:02:32.497-03:00 DEBUG 10492 --- [aula11_car] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-24T02:02:32.549-03:00 DEBUG 10492 --- [aula11_car] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-24T02:02:32.602-03:00 DEBUG 10492 --- [aula11_car] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-24T02:02:32.657-03:00  INFO 10492 --- [aula11_car] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-04-24T02:02:32.657-03:00  INFO 10492 --- [aula11_car] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-04-24T02:02:32.659-03:00  INFO 10492 --- [aula11_car] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2024-04-24T02:02:32.700-03:00  INFO 10492 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : Started CarroControllerTest in 3.119 seconds (process running for 4.248)
+2024-04-24T02:02:32.975-03:00 DEBUG 10492 --- [aula11_car] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-04-24T02:02:32.986-03:00 DEBUG 10492 --- [aula11_car] [main] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2024-04-24T02:02:32.990-03:00 DEBUG 10492 --- [aula11_car] [main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource carros.]
+2024-04-24T02:02:33.029-03:00 DEBUG 10492 --- [aula11_car] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@6548bb7d, started on Wed Apr 24 02:02:30 BRT 2024
+2024-04-24T02:03:10.743-03:00  INFO 20276 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : Starting CarroControllerTest using Java 21.0.2 with PID 20276 (started by david in C:\Users\david\OneDrive\Área de Trabalho\Programaçao\residencia-avancado\240076-david-vinicius-pereira-lima\java-avancado\aula11_car)
+2024-04-24T02:03:10.745-03:00  INFO 20276 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : No active profile set, falling back to 1 default profile: "default"
+2024-04-24T02:03:10.768-03:00 DEBUG 20276 --- [aula11_car] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6548bb7d
+2024-04-24T02:03:12.888-03:00 DEBUG 20276 --- [aula11_car] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2024-04-24T02:03:13.018-03:00 DEBUG 20276 --- [aula11_car] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-24T02:03:13.071-03:00 DEBUG 20276 --- [aula11_car] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-24T02:03:13.122-03:00 DEBUG 20276 --- [aula11_car] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-24T02:03:13.174-03:00  INFO 20276 --- [aula11_car] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-04-24T02:03:13.175-03:00  INFO 20276 --- [aula11_car] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-04-24T02:03:13.177-03:00  INFO 20276 --- [aula11_car] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-04-24T02:03:13.219-03:00  INFO 20276 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : Started CarroControllerTest in 2.923 seconds (process running for 4.054)
+2024-04-24T02:03:13.510-03:00 DEBUG 20276 --- [aula11_car] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-04-24T02:03:13.522-03:00 DEBUG 20276 --- [aula11_car] [main] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2024-04-24T02:03:13.527-03:00 DEBUG 20276 --- [aula11_car] [main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource carros/1.]
+2024-04-24T02:03:13.564-03:00 DEBUG 20276 --- [aula11_car] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@6548bb7d, started on Wed Apr 24 02:03:10 BRT 2024
+2024-04-24T02:07:57.450-03:00  INFO 4104 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : Starting CarroControllerTest using Java 21.0.2 with PID 4104 (started by david in C:\Users\david\OneDrive\Área de Trabalho\Programaçao\residencia-avancado\240076-david-vinicius-pereira-lima\java-avancado\aula11_car)
+2024-04-24T02:07:57.452-03:00  INFO 4104 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : No active profile set, falling back to 1 default profile: "default"
+2024-04-24T02:07:57.476-03:00 DEBUG 4104 --- [aula11_car] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@b52b755
+2024-04-24T02:07:58.759-03:00 DEBUG 4104 --- [aula11_car] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2024-04-24T02:07:58.910-03:00 DEBUG 4104 --- [aula11_car] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-24T02:07:58.981-03:00 DEBUG 4104 --- [aula11_car] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-24T02:07:59.024-03:00 DEBUG 4104 --- [aula11_car] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-24T02:07:59.076-03:00  INFO 4104 --- [aula11_car] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-04-24T02:07:59.077-03:00  INFO 4104 --- [aula11_car] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-04-24T02:07:59.078-03:00  INFO 4104 --- [aula11_car] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-04-24T02:07:59.112-03:00  INFO 4104 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : Started CarroControllerTest in 2.117 seconds (process running for 4.162)
+2024-04-24T02:07:59.355-03:00 DEBUG 4104 --- [aula11_car] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@b52b755, started on Wed Apr 24 02:07:57 BRT 2024
+2024-04-24T02:13:28.459-03:00  INFO 3004 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : Starting CarroControllerTest using Java 21.0.2 with PID 3004 (started by david in C:\Users\david\OneDrive\Área de Trabalho\Programaçao\residencia-avancado\240076-david-vinicius-pereira-lima\java-avancado\aula11_car)
+2024-04-24T02:13:28.461-03:00  INFO 3004 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : No active profile set, falling back to 1 default profile: "default"
+2024-04-24T02:13:28.482-03:00 DEBUG 3004 --- [aula11_car] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6548bb7d
+2024-04-24T02:13:31.394-03:00 DEBUG 3004 --- [aula11_car] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2024-04-24T02:13:31.526-03:00 DEBUG 3004 --- [aula11_car] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-24T02:13:31.575-03:00 DEBUG 3004 --- [aula11_car] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-24T02:13:31.632-03:00 DEBUG 3004 --- [aula11_car] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-24T02:13:31.687-03:00  INFO 3004 --- [aula11_car] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-04-24T02:13:31.687-03:00  INFO 3004 --- [aula11_car] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-04-24T02:13:31.689-03:00  INFO 3004 --- [aula11_car] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2024-04-24T02:13:31.730-03:00  INFO 3004 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : Started CarroControllerTest in 3.688 seconds (process running for 4.873)
+2024-04-24T02:13:32.030-03:00 DEBUG 3004 --- [aula11_car] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-04-24T02:13:32.042-03:00 DEBUG 3004 --- [aula11_car] [main] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2024-04-24T02:13:32.047-03:00 DEBUG 3004 --- [aula11_car] [main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource carros/1.]
+2024-04-24T02:13:32.098-03:00 DEBUG 3004 --- [aula11_car] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@6548bb7d, started on Wed Apr 24 02:13:28 BRT 2024
+2024-04-24T02:13:37.854-03:00  INFO 20780 --- [aula11_car] [restartedMain] o.a.aula11_car.Aula11CarApplication      : Starting Aula11CarApplication using Java 21.0.2 with PID 20780 (C:\Users\david\OneDrive\Área de Trabalho\Programaçao\residencia-avancado\240076-david-vinicius-pereira-lima\java-avancado\aula11_car\target\classes started by david in C:\Users\david\OneDrive\Área de Trabalho\Programaçao\residencia-avancado\240076-david-vinicius-pereira-lima\java-avancado\aula11_car)
+2024-04-24T02:13:37.855-03:00  INFO 20780 --- [aula11_car] [restartedMain] o.a.aula11_car.Aula11CarApplication      : No active profile set, falling back to 1 default profile: "default"
+2024-04-24T02:13:37.899-03:00  INFO 20780 --- [aula11_car] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-04-24T02:13:37.900-03:00  INFO 20780 --- [aula11_car] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-04-24T02:13:38.917-03:00  INFO 20780 --- [aula11_car] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-24T02:13:38.979-03:00  INFO 20780 --- [aula11_car] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 3 JPA repository interfaces.
+2024-04-24T02:13:39.518-03:00  INFO 20780 --- [aula11_car] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-04-24T02:13:39.530-03:00  INFO 20780 --- [aula11_car] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-24T02:13:39.530-03:00  INFO 20780 --- [aula11_car] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-24T02:13:39.577-03:00  INFO 20780 --- [aula11_car] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-24T02:13:39.578-03:00  INFO 20780 --- [aula11_car] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1678 ms
+2024-04-24T02:13:39.727-03:00  INFO 20780 --- [aula11_car] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-24T02:13:39.816-03:00  INFO 20780 --- [aula11_car] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-24T02:13:39.858-03:00  INFO 20780 --- [aula11_car] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-24T02:13:40.132-03:00  INFO 20780 --- [aula11_car] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-24T02:13:40.164-03:00  INFO 20780 --- [aula11_car] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-24T02:13:40.350-03:00  INFO 20780 --- [aula11_car] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6f8b91a2
+2024-04-24T02:13:40.352-03:00  INFO 20780 --- [aula11_car] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-24T02:13:40.406-03:00  WARN 20780 --- [aula11_car] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-24T02:13:41.594-03:00  INFO 20780 --- [aula11_car] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-24T02:13:41.706-03:00  INFO 20780 --- [aula11_car] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-24T02:13:41.999-03:00  INFO 20780 --- [aula11_car] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-24T02:13:42.524-03:00  WARN 20780 --- [aula11_car] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-24T02:13:42.624-03:00 DEBUG 20780 --- [aula11_car] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 28 mappings in 'requestMappingHandlerMapping'
+2024-04-24T02:13:42.691-03:00 DEBUG 20780 --- [aula11_car] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-04-24T02:13:42.721-03:00 DEBUG 20780 --- [aula11_car] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-24T02:13:42.757-03:00 DEBUG 20780 --- [aula11_car] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-24T02:13:42.910-03:00  INFO 20780 --- [aula11_car] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-04-24T02:13:42.945-03:00  INFO 20780 --- [aula11_car] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-04-24T02:13:42.953-03:00  INFO 20780 --- [aula11_car] [restartedMain] o.a.aula11_car.Aula11CarApplication      : Started Aula11CarApplication in 5.519 seconds (process running for 6.275)
+2024-04-24T02:13:42.956-03:00  INFO 20780 --- [aula11_car] [restartedMain] o.a.aula11_car.Aula11CarApplication      : Application started ...
+2024-04-24T02:14:27.421-03:00  INFO 20780 --- [aula11_car] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-24T02:14:27.421-03:00  INFO 20780 --- [aula11_car] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-24T02:14:27.421-03:00 DEBUG 20780 --- [aula11_car] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-04-24T02:14:27.421-03:00 DEBUG 20780 --- [aula11_car] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-04-24T02:14:27.421-03:00 DEBUG 20780 --- [aula11_car] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-04-24T02:14:27.423-03:00 DEBUG 20780 --- [aula11_car] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@337dcb2f
+2024-04-24T02:14:27.424-03:00 DEBUG 20780 --- [aula11_car] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@1764a541
+2024-04-24T02:14:27.424-03:00 DEBUG 20780 --- [aula11_car] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-24T02:14:27.424-03:00  INFO 20780 --- [aula11_car] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-04-24T02:14:27.436-03:00 DEBUG 20780 --- [aula11_car] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/carros", parameters={}
+2024-04-24T02:14:27.467-03:00 DEBUG 20780 --- [aula11_car] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.aula11.aula11_car.controller.CarroController#retornaCarros()
+2024-04-24T02:14:27.499-03:00  INFO 20780 --- [aula11_car] [http-nio-8080-exec-1] o.a.a.controller.CarroController         : Retornando lista de carros
+2024-04-24T02:14:27.624-03:00 DEBUG 20780 --- [aula11_car] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json]
+2024-04-24T02:14:27.633-03:00 DEBUG 20780 --- [aula11_car] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[Carro(id=3, placa=OVH4C31, marca=Daniel LLC, modelo=Aerodynamic Aluminum Plate, anoFabricacao=1984, (truncated)...]
+2024-04-24T02:14:27.678-03:00 DEBUG 20780 --- [aula11_car] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-04-24T02:15:44.940-03:00  INFO 2976 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : Starting CarroControllerTest using Java 21.0.2 with PID 2976 (started by david in C:\Users\david\OneDrive\Área de Trabalho\Programaçao\residencia-avancado\240076-david-vinicius-pereira-lima\java-avancado\aula11_car)
+2024-04-24T02:15:44.942-03:00  INFO 2976 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : No active profile set, falling back to 1 default profile: "default"
+2024-04-24T02:15:44.963-03:00 DEBUG 2976 --- [aula11_car] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6548bb7d
+2024-04-24T02:15:47.120-03:00 DEBUG 2976 --- [aula11_car] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2024-04-24T02:15:47.263-03:00 DEBUG 2976 --- [aula11_car] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-24T02:15:47.314-03:00 DEBUG 2976 --- [aula11_car] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-24T02:15:47.358-03:00 DEBUG 2976 --- [aula11_car] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-24T02:15:47.412-03:00  INFO 2976 --- [aula11_car] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-04-24T02:15:47.412-03:00  INFO 2976 --- [aula11_car] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-04-24T02:15:47.414-03:00  INFO 2976 --- [aula11_car] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2024-04-24T02:15:47.450-03:00  INFO 2976 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : Started CarroControllerTest in 2.946 seconds (process running for 4.084)
+2024-04-24T02:15:47.731-03:00 DEBUG 2976 --- [aula11_car] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-04-24T02:15:47.748-03:00 DEBUG 2976 --- [aula11_car] [main] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2024-04-24T02:15:47.752-03:00 DEBUG 2976 --- [aula11_car] [main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource carros/1.]
+2024-04-24T02:15:47.802-03:00 DEBUG 2976 --- [aula11_car] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@6548bb7d, started on Wed Apr 24 02:15:44 BRT 2024
+2024-04-24T02:16:46.226-03:00  INFO 3932 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : Starting CarroControllerTest using Java 21.0.2 with PID 3932 (started by david in C:\Users\david\OneDrive\Área de Trabalho\Programaçao\residencia-avancado\240076-david-vinicius-pereira-lima\java-avancado\aula11_car)
+2024-04-24T02:16:46.229-03:00  INFO 3932 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : No active profile set, falling back to 1 default profile: "default"
+2024-04-24T02:16:46.254-03:00 DEBUG 3932 --- [aula11_car] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@56de6d6b
+2024-04-24T02:16:48.880-03:00 DEBUG 3932 --- [aula11_car] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2024-04-24T02:16:49.037-03:00 DEBUG 3932 --- [aula11_car] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-24T02:16:49.100-03:00 DEBUG 3932 --- [aula11_car] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-24T02:16:49.148-03:00 DEBUG 3932 --- [aula11_car] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-24T02:16:49.207-03:00  INFO 3932 --- [aula11_car] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-04-24T02:16:49.207-03:00  INFO 3932 --- [aula11_car] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-04-24T02:16:49.209-03:00  INFO 3932 --- [aula11_car] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2024-04-24T02:16:49.247-03:00  INFO 3932 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : Started CarroControllerTest in 3.598 seconds (process running for 5.566)
+2024-04-24T02:16:49.544-03:00 DEBUG 3932 --- [aula11_car] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-04-24T02:16:49.556-03:00 DEBUG 3932 --- [aula11_car] [main] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2024-04-24T02:16:49.561-03:00 DEBUG 3932 --- [aula11_car] [main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource carros/1.]
+2024-04-24T02:18:38.199-03:00 DEBUG 3932 --- [aula11_car] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@56de6d6b, started on Wed Apr 24 02:16:46 BRT 2024
+2024-04-24T02:21:08.316-03:00  INFO 12824 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : Starting CarroControllerTest using Java 21.0.2 with PID 12824 (started by david in C:\Users\david\OneDrive\Área de Trabalho\Programaçao\residencia-avancado\240076-david-vinicius-pereira-lima\java-avancado\aula11_car)
+2024-04-24T02:21:08.319-03:00  INFO 12824 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : No active profile set, falling back to 1 default profile: "default"
+2024-04-24T02:21:08.339-03:00 DEBUG 12824 --- [aula11_car] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@e27ba81
+2024-04-24T02:21:10.539-03:00 DEBUG 12824 --- [aula11_car] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 10 mappings in 'requestMappingHandlerMapping'
+2024-04-24T02:21:10.655-03:00 DEBUG 12824 --- [aula11_car] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-24T02:21:10.704-03:00 DEBUG 12824 --- [aula11_car] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-24T02:21:10.742-03:00 DEBUG 12824 --- [aula11_car] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-24T02:21:10.803-03:00  INFO 12824 --- [aula11_car] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-04-24T02:21:10.803-03:00  INFO 12824 --- [aula11_car] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-04-24T02:21:10.805-03:00  INFO 12824 --- [aula11_car] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-04-24T02:21:10.841-03:00  INFO 12824 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : Started CarroControllerTest in 2.965 seconds (process running for 4.067)
+2024-04-24T02:21:11.124-03:00 DEBUG 12824 --- [aula11_car] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.aula11.aula11_car.controller.CarroController#retornaCarroID(Long)
+2024-04-24T02:21:11.198-03:00  INFO 12824 --- [aula11_car] [main] o.a.a.controller.CarroController         : Retornando carro por Id
+2024-04-24T02:21:11.216-03:00 DEBUG 12824 --- [aula11_car] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json]
+2024-04-24T02:21:11.278-03:00 DEBUG 12824 --- [aula11_car] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Carro(id=null, placa=QFY3X75, marca=Kertzmann-Kilback, modelo=Ergonomic Granite Bag, anoFabricacao=2 (truncated)...]
+2024-04-24T02:21:11.338-03:00 DEBUG 12824 --- [aula11_car] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@e27ba81, started on Wed Apr 24 02:21:08 BRT 2024
+2024-04-24T02:21:31.453-03:00  INFO 20252 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : Starting CarroControllerTest using Java 21.0.2 with PID 20252 (started by david in C:\Users\david\OneDrive\Área de Trabalho\Programaçao\residencia-avancado\240076-david-vinicius-pereira-lima\java-avancado\aula11_car)
+2024-04-24T02:21:31.455-03:00  INFO 20252 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : No active profile set, falling back to 1 default profile: "default"
+2024-04-24T02:21:31.477-03:00 DEBUG 20252 --- [aula11_car] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@e27ba81
+2024-04-24T02:21:33.671-03:00 DEBUG 20252 --- [aula11_car] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 10 mappings in 'requestMappingHandlerMapping'
+2024-04-24T02:21:33.792-03:00 DEBUG 20252 --- [aula11_car] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-24T02:21:33.840-03:00 DEBUG 20252 --- [aula11_car] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-24T02:21:33.884-03:00 DEBUG 20252 --- [aula11_car] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-24T02:21:33.943-03:00  INFO 20252 --- [aula11_car] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-04-24T02:21:33.943-03:00  INFO 20252 --- [aula11_car] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-04-24T02:21:33.945-03:00  INFO 20252 --- [aula11_car] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2024-04-24T02:21:33.982-03:00  INFO 20252 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : Started CarroControllerTest in 2.957 seconds (process running for 4.141)
+2024-04-24T02:21:34.267-03:00 DEBUG 20252 --- [aula11_car] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.aula11.aula11_car.controller.CarroController#retornaCarros()
+2024-04-24T02:21:34.343-03:00  INFO 20252 --- [aula11_car] [main] o.a.a.controller.CarroController         : Retornando lista de carros
+2024-04-24T02:21:34.356-03:00 DEBUG 20252 --- [aula11_car] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json]
+2024-04-24T02:21:34.371-03:00 DEBUG 20252 --- [aula11_car] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[Carro(id=null, placa=KPG8D36, marca=Hudson, Denesik and Schultz, modelo=Enormous Granite Gloves, an (truncated)...]
+2024-04-24T02:21:34.484-03:00 DEBUG 20252 --- [aula11_car] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@e27ba81, started on Wed Apr 24 02:21:31 BRT 2024
+2024-04-24T02:21:48.825-03:00  INFO 8312 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : Starting CarroControllerTest using Java 21.0.2 with PID 8312 (started by david in C:\Users\david\OneDrive\Área de Trabalho\Programaçao\residencia-avancado\240076-david-vinicius-pereira-lima\java-avancado\aula11_car)
+2024-04-24T02:21:48.826-03:00  INFO 8312 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : No active profile set, falling back to 1 default profile: "default"
+2024-04-24T02:21:48.847-03:00 DEBUG 8312 --- [aula11_car] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@e27ba81
+2024-04-24T02:21:51.266-03:00 DEBUG 8312 --- [aula11_car] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 10 mappings in 'requestMappingHandlerMapping'
+2024-04-24T02:21:51.416-03:00 DEBUG 8312 --- [aula11_car] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-24T02:21:51.475-03:00 DEBUG 8312 --- [aula11_car] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-24T02:21:51.523-03:00 DEBUG 8312 --- [aula11_car] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-24T02:21:51.581-03:00  INFO 8312 --- [aula11_car] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-04-24T02:21:51.582-03:00  INFO 8312 --- [aula11_car] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-04-24T02:21:51.584-03:00  INFO 8312 --- [aula11_car] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2024-04-24T02:21:51.624-03:00  INFO 8312 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : Started CarroControllerTest in 3.245 seconds (process running for 4.607)
+2024-04-24T02:21:52.014-03:00 DEBUG 8312 --- [aula11_car] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-04-24T02:21:52.025-03:00 DEBUG 8312 --- [aula11_car] [main] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2024-04-24T02:21:52.031-03:00 DEBUG 8312 --- [aula11_car] [main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/carros.]
+2024-04-24T02:21:52.067-03:00 DEBUG 8312 --- [aula11_car] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@e27ba81, started on Wed Apr 24 02:21:48 BRT 2024
+2024-04-24T02:22:05.385-03:00  INFO 19588 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : Starting CarroControllerTest using Java 21.0.2 with PID 19588 (started by david in C:\Users\david\OneDrive\Área de Trabalho\Programaçao\residencia-avancado\240076-david-vinicius-pereira-lima\java-avancado\aula11_car)
+2024-04-24T02:22:05.387-03:00  INFO 19588 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : No active profile set, falling back to 1 default profile: "default"
+2024-04-24T02:22:05.458-03:00 DEBUG 19588 --- [aula11_car] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@e27ba81
+2024-04-24T02:22:08.824-03:00 DEBUG 19588 --- [aula11_car] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 10 mappings in 'requestMappingHandlerMapping'
+2024-04-24T02:22:09.006-03:00 DEBUG 19588 --- [aula11_car] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-24T02:22:09.076-03:00 DEBUG 19588 --- [aula11_car] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-24T02:22:09.153-03:00 DEBUG 19588 --- [aula11_car] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-24T02:22:09.245-03:00  INFO 19588 --- [aula11_car] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-04-24T02:22:09.246-03:00  INFO 19588 --- [aula11_car] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-04-24T02:22:09.253-03:00  INFO 19588 --- [aula11_car] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2024-04-24T02:22:09.311-03:00  INFO 19588 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : Started CarroControllerTest in 4.513 seconds (process running for 5.633)
+2024-04-24T02:22:09.853-03:00 DEBUG 19588 --- [aula11_car] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.aula11.aula11_car.controller.CarroController#inserirCarro(Carro)
+2024-04-24T02:22:09.934-03:00 DEBUG 19588 --- [aula11_car] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Carro(id=null, placa=DQP0G04, marca=Robel, Hane and Hessel, modelo=Gorgeous Paper Hat, anoFabricacao (truncated)...]
+2024-04-24T02:22:10.051-03:00  INFO 19588 --- [aula11_car] [main] o.a.a.controller.CarroController         : Inserindo carro
+2024-04-24T02:22:10.064-03:00 DEBUG 19588 --- [aula11_car] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json]
+2024-04-24T02:22:10.066-03:00 DEBUG 19588 --- [aula11_car] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Carro(id=66717, placa=FRR1H43, marca=Heller-Wilkinson, modelo=Durable Wooden Lamp, anoFabricacao=201 (truncated)...]
+2024-04-24T02:22:10.109-03:00 DEBUG 19588 --- [aula11_car] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@e27ba81, started on Wed Apr 24 02:22:05 BRT 2024
+2024-04-24T02:24:59.546-03:00  INFO 10756 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : Starting CarroControllerTest using Java 21.0.2 with PID 10756 (started by david in C:\Users\david\OneDrive\Área de Trabalho\Programaçao\residencia-avancado\240076-david-vinicius-pereira-lima\java-avancado\aula11_car)
+2024-04-24T02:24:59.548-03:00  INFO 10756 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : No active profile set, falling back to 1 default profile: "default"
+2024-04-24T02:24:59.571-03:00 DEBUG 10756 --- [aula11_car] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@e27ba81
+2024-04-24T02:25:01.988-03:00 DEBUG 10756 --- [aula11_car] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 10 mappings in 'requestMappingHandlerMapping'
+2024-04-24T02:25:02.125-03:00 DEBUG 10756 --- [aula11_car] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-24T02:25:02.187-03:00 DEBUG 10756 --- [aula11_car] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-24T02:25:02.241-03:00 DEBUG 10756 --- [aula11_car] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-24T02:25:02.305-03:00  INFO 10756 --- [aula11_car] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-04-24T02:25:02.306-03:00  INFO 10756 --- [aula11_car] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-04-24T02:25:02.307-03:00  INFO 10756 --- [aula11_car] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-04-24T02:25:02.346-03:00  INFO 10756 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : Started CarroControllerTest in 3.269 seconds (process running for 4.422)
+2024-04-24T02:25:02.469-03:00 DEBUG 10756 --- [aula11_car] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.aula11.aula11_car.controller.CarroController#retornaCarroID(Long)
+2024-04-24T02:25:02.539-03:00  INFO 10756 --- [aula11_car] [main] o.a.a.controller.CarroController         : Retornando carro por Id
+2024-04-24T02:25:02.552-03:00 DEBUG 10756 --- [aula11_car] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json]
+2024-04-24T02:25:02.610-03:00 DEBUG 10756 --- [aula11_car] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2024-04-24T02:25:02.638-03:00 DEBUG 10756 --- [aula11_car] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@e27ba81, started on Wed Apr 24 02:24:59 BRT 2024
+2024-04-24T02:30:49.624-03:00  INFO 20792 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : Starting CarroControllerTest using Java 21.0.2 with PID 20792 (started by david in C:\Users\david\OneDrive\Área de Trabalho\Programaçao\residencia-avancado\240076-david-vinicius-pereira-lima\java-avancado\aula11_car)
+2024-04-24T02:30:49.626-03:00  INFO 20792 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : No active profile set, falling back to 1 default profile: "default"
+2024-04-24T02:30:49.647-03:00 DEBUG 20792 --- [aula11_car] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@e27ba81
+2024-04-24T02:30:51.969-03:00 DEBUG 20792 --- [aula11_car] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 10 mappings in 'requestMappingHandlerMapping'
+2024-04-24T02:30:52.097-03:00 DEBUG 20792 --- [aula11_car] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-24T02:30:52.146-03:00 DEBUG 20792 --- [aula11_car] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-24T02:30:52.198-03:00 DEBUG 20792 --- [aula11_car] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-24T02:30:52.254-03:00  INFO 20792 --- [aula11_car] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-04-24T02:30:52.256-03:00  INFO 20792 --- [aula11_car] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-04-24T02:30:52.258-03:00  INFO 20792 --- [aula11_car] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2024-04-24T02:30:52.294-03:00  INFO 20792 --- [aula11_car] [main] o.a.a.t.CarroControllerTest              : Started CarroControllerTest in 3.134 seconds (process running for 4.526)
+2024-04-24T02:30:52.668-03:00 DEBUG 20792 --- [aula11_car] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.aula11.aula11_car.controller.CarroController#updateCarro(Carro, Long)
+2024-04-24T02:30:52.746-03:00 DEBUG 20792 --- [aula11_car] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [Carro(id=null, placa=DKX1E70, marca=Hudson-Schumm, modelo=Aerodynamic Wooden Gloves, anoFabricacao=2 (truncated)...]
+2024-04-24T02:30:52.860-03:00  INFO 20792 --- [aula11_car] [main] o.a.a.controller.CarroController         : Atualizando carro pelo ID
+2024-04-24T02:30:52.873-03:00 DEBUG 20792 --- [aula11_car] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json]
+2024-04-24T02:30:52.875-03:00 DEBUG 20792 --- [aula11_car] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Carro(id=null, placa=Updated VEM1Y58, marca=Gutkowski Inc, modelo=Heavy Duty Bronze Shirt, anoFabric (truncated)...]
+2024-04-24T02:30:52.919-03:00 DEBUG 20792 --- [aula11_car] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@e27ba81, started on Wed Apr 24 02:30:49 BRT 2024
