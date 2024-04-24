@@ -45,6 +45,9 @@ public class Carro {
     @Column(name = "anoFabricacao")
     @NonNull private Integer anoFabricacao;
 
+    @Column(name = "exists", nullable = false)
+    private boolean exists = true;
+
     @ManyToOne
     @JoinColumn(name = "concessionaria_id")
     private Concessionaria concessionaria;

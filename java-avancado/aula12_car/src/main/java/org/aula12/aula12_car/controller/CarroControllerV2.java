@@ -24,15 +24,14 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Locale;
 import java.util.Random;
-
 @Validated
-@RequestMapping(value = "/v1/carros", produces = {"application/json"})
+@RequestMapping(value = "/v2/carros", produces = {"application/json"})
 @Tag(name = "api-carro")
 @RequiredArgsConstructor
 @RestController
-public class CarroController {
+public class CarroControllerV2 {
     private static Logger log = LoggerFactory.getLogger(CarroController.class);
-    @Qualifier("carroService")
+    @Qualifier("carroServiceV2")
     private final CarroService carroService;
     private final ConcessionariaService concessionariaService;
     @Operation(summary = "Retorna uma lista de todos os carros do banco de dados", method = "GET")
@@ -41,7 +40,7 @@ public class CarroController {
             @ApiResponse(responseCode = "400", description = "Bad Request")
     })
     @GetMapping(consumes = MediaType.ALL_VALUE)
-    public ResponseEntity <List<Carro>> retornaCarros(){
+    public ResponseEntity<List<Carro>> retornaCarros(){
         log.info("Retornando lista de carros");
         List<Carro>listaCarro = carroService.findAll();
         return ResponseEntity.ok(listaCarro);
@@ -139,5 +138,4 @@ public class CarroController {
         carroService.deleteCarro(id);
         return ResponseEntity.noContent().build();
     }
-
 }

@@ -12,6 +12,7 @@ import org.springframework.data.domain.Sort.Order;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -40,10 +41,19 @@ public class CarroServiceV2 extends CarroService{
     public Page<Carro>findAllPageables(Pageable pageable){
         return carroRepository.findAll(pageable);
     }
-    /*
+
     public Map<String, Object> findCarro(int pag, int size){
         List<Carro>carros = new ArrayList<>();
         Pageable paging = PageRequest.of(pag, size);
-        Page<Carro>carroPage = carroRepository.findB
-    }*/
+        Page<Carro>carroPage = carroRepository.findByExists(true, paging);
+        carros = carroPage.getContent();
+
+        Map<String, Object> response = new HashMap<>();
+        response.put("carros",carros);
+        response.put("currentPage", carroPage.getNumber());
+        response.put("totalItems", carroPage.getTotalElements());
+        response.put("totalPages", carroPage.getTotalPages());
+
+        return response;
+    }
 }
