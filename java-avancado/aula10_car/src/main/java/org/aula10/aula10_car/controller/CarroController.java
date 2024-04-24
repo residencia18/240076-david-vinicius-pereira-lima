@@ -31,7 +31,7 @@ import java.time.LocalDate;
 import java.util.*;
 
 @Validated
-@RequestMapping(value = "api/carros/", produces = {"application/json"})
+@RequestMapping(value = "api/carros", produces = {"application/json"})
 @Tag(name = "api-carro")
 @RequiredArgsConstructor
 @RestController

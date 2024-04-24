@@ -5,6 +5,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.aula10.aula10_car.controller.dto.ServicoDTO;
 import org.aula10.aula10_car.controller.form.ServicoForm;
@@ -17,6 +18,7 @@ import org.aula10.aula10_car.service.ServicoService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -46,15 +48,10 @@ public class ServicoController {
 
     })
     @GetMapping(consumes = MediaType.ALL_VALUE)
-    public List<ServicoDTO> retornaServicos(){
+    public ResponseEntity<List<Servico>> retornaServicos(){
         log.info("Retornando todos os serviços");
-        List<Servico> listaServicos = servicoRepository.findAll();
-        List<ServicoDTO> listaServicosDTO = new ArrayList<ServicoDTO>();
-        for (Servico servico : listaServicos ){
-            ServicoDTO servicoDTO = new ServicoDTO(servico);
-            listaServicosDTO.add(servicoDTO);
-        }
-        return listaServicosDTO;
+        List<Servico>servicos = servicoService.findAll();
+        return ResponseEntity.ok(servicos);
     }
     @Operation(summary = "Retorna serviço por ID", method = "GET")
     @ApiResponses(value = {
@@ -65,17 +62,9 @@ public class ServicoController {
     @GetMapping(value = "/{id}", consumes = MediaType.ALL_VALUE)
     public ResponseEntity<?> retornaServicoById(@PathVariable Long id){
         log.info("Retornando serviço por ID");
-        if (id != null){
-            try{
-                Servico servico = servicoRepository.getReferenceById(id);
-                ServicoDTO servicoDTO = new ServicoDTO(servico);
-                return ResponseEntity.ok(servicoDTO);
-            }catch (Exception e){
-                return ResponseEntity.notFound().build();
-            }
-        }
-        else
-            return ResponseEntity.badRequest().build();
+        return servicoService.findById(id)
+                .map(ResponseEntity::ok)
+                .orElseGet(()->ResponseEntity.notFound().build());
     }
     @Operation(summary = "Inserir um novo serviço", method = "POST")
     @ApiResponses(value = {
@@ -83,19 +72,10 @@ public class ServicoController {
             @ApiResponse(responseCode = "400", description = "Falha na inserção")
     })
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<?> inserirServico(@RequestBody ServicoForm servicoForm, UriComponentsBuilder uriBuilder){
+    public ResponseEntity<Servico> inserirServico(@RequestBody @Valid Servico servico){
         log.info("Inserindo serviço");
-        try {
-            Servico servico = servicoForm.criarServico();
-            servicoRepository.save(servico);
-            ServicoDTO servicoDTO = new ServicoDTO(servico);
-            uriBuilder.path("/servico/{id}");
-            URI uri =  uriBuilder.buildAndExpand(servico.getId()).toUri();
-            ResponseEntity.created(uri).body(servicoDTO);
-        }catch (Exception e){
-            return ResponseEntity.badRequest().build();
-        }
-        return null;
+        Servico servicoSalvo = servicoService.create(servico);
+        return new ResponseEntity<>(servicoSalvo, HttpStatus.CREATED);
     }
 
     @Operation(summary = "Inserir um Serviço com JavaFaker", method = "POST")
@@ -104,7 +84,7 @@ public class ServicoController {
             @ApiResponse(responseCode = "400", description = "Erro ao inserir serviço")
     })
     @PostMapping(value = "/inserirFakeServico/")
-    public String gerarServicoFaker(){
+    public ResponseEntity<Servico> gerarServicoFaker(){
         log.info("Criar um novo serviço usando JavaFaker");
         Faker usFaker = new Faker(new Locale("en-US"));
         Date dataInicial = usFaker.date().future(365, TimeUnit.DAYS);
@@ -114,11 +94,11 @@ public class ServicoController {
         Integer duracao = (int) duracaoL;
         Double preco =  Double.parseDouble(usFaker.commerce().price().replace(",", "."));
         Servico servico = new Servico(usFaker.company().buzzword(), (int) duracao, preco);
-        servicoRepository.save(servico);
+        servicoService.create(servico);
         log.info("Serviço salvo:\t"+servico+"\n");
-        return "Serviço salvo";
+        return new ResponseEntity<>(servico, HttpStatus.CREATED);
     }
-
+/*
     @Operation(summary = "Criar serviço para a concessionaria", method = "POST")
     @PostMapping(value="/criarServicoConcessionaria/{concId}", consumes = MediaType.APPLICATION_JSON_VALUE)
     public String criarServicoEmConcessionaria(@RequestBody Servico entity, @PathVariable(name = "concId") Integer concId){
@@ -134,23 +114,23 @@ public class ServicoController {
         concessionaria = concessionariaRepository.save(concessionaria);
         log.info("Serviço adicionado á concessionária");
         return "Serviço salvo";
-    }
+    }*/
     @Operation(summary = "Associar serviço com concessionária", method = "POST")
-    @PostMapping(value = "/associarServicoConcessionaria/{concId}/{servId}")
-    public String associarServicoConcessionaria(@PathVariable(name = "concId") Long concId, @PathVariable (name = "servId") Long servId){
-        log.info("Associando um Serviço existente a uma Concessinária existente");
-        Servico servico = this.servicoRepository.getReferenceById(servId);
+    @PostMapping(value = "{servId}/assignConcessionaria/{concId}")
+    public ResponseEntity<?> associarServicoConcessionaria(@PathVariable(name = "concId") Long concId, @PathVariable (name = "servId") Long servId){
+        Servico servico = servicoService.findById(servId).orElseThrow(()->new RuntimeException("Serviço não encontrado"));
         log.info("Detalhes do serviço:\t"+servico.toString()+"\n");
 
-        Concessionaria concessionaria = this.concessionariaRepository.getReferenceById(concId);
+        Concessionaria concessionaria =concessionariaService.findById(concId).orElseThrow(()->new RuntimeException("Concessionária não encontrada"));
         log.info("Detalhes da concessionária:\t"+concessionaria.toString()+"\n");
 
-        Set<Servico>servicos = new HashSet<>();
-        servicos.add(servico);
-        concessionaria.setServicos(servicos);
-        concessionaria = concessionariaRepository.save(concessionaria);
-        log.info("Serviço adicionado á concessionária");
-        return "Serviço salvo";
+        servico.getConcessionarias().add(concessionaria);
+        concessionaria.getServicos().add(servico);
+
+        servicoService.create(servico);
+        concessionariaService.create(concessionaria);
+
+        return ResponseEntity.ok().build();
     }
 
     @Operation(summary = "Atualizar serviço", method = "PUT")
@@ -160,26 +140,11 @@ public class ServicoController {
             @ApiResponse(responseCode = "404", description = "Serviço não encontrado")
     })
     @PutMapping(value="/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<?> updateServico(@PathVariable Long id, @RequestBody ServicoForm servicoForm){
+    public ResponseEntity<Servico> updateServico(@PathVariable Long id, @RequestBody @Valid Servico servico){
         log.info("Atualizando serviço por ID");
-        if(id != null){
-            try {
-                Servico servico = servicoRepository.getReferenceById(id);
-                if (servico.getDescricao()!=null)
-                    servico.setDescricao(servicoForm.getDescricao());
-                if (servico.getDuracao()!=null)
-                    servico.setDuracao(servicoForm.getDuracao());
-                if (servico.getPreco()!=null)
-                    servico.setPreco(servicoForm.getPreco());
-                servicoRepository.save(servico);
-                ServicoDTO servicoDTO = new ServicoDTO(servico);
-                return ResponseEntity.ok(servicoDTO);
-            }catch (Exception e){
-                return ResponseEntity.notFound().build();
-            }
-        }
-        else
-            return ResponseEntity.badRequest().build();
+        return servicoService.update(id,servico)
+                .map(ResponseEntity::ok)
+                .orElseGet(()->ResponseEntity.notFound().build());
     }
     @Operation(summary = "Deletar um serviço", method = "DELETE")
     @ApiResponses(value = {
@@ -190,19 +155,8 @@ public class ServicoController {
     @DeleteMapping(value = "/{id}", consumes = MediaType.ALL_VALUE)
     public ResponseEntity<?> deletarServico(@PathVariable Long id){
         log.info("Deletando serviço por ID");
-        if(id!=null){
-            try {
-                Servico servico = servicoRepository.getReferenceById(id);
-                ServicoDTO servicoDTO = new ServicoDTO(servico);
-                servicoRepository.delete(servico);
-                System.out.println(servicoDTO + " DELETADO com sucesso!!!");
-                return ResponseEntity.ok(servicoDTO);
-            }catch (Exception e){
-                return ResponseEntity.notFound().build();
-            }
-        }
-        else
-            return ResponseEntity.badRequest().build();
+        servicoService.delete(id);
+        return ResponseEntity.noContent().build();
     }
 
 }

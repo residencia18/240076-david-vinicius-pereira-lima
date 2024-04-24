@@ -22,7 +22,7 @@ import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-@WebMvcTest
+@WebMvcTest(CarroControllerTest.class)
 public class CarroControllerTest {
     @Autowired
     private MockMvc mockMvc;
@@ -66,7 +66,7 @@ public class CarroControllerTest {
 
         when(carroService.create(any(Carro.class))).thenReturn(carroSalvo);
 
-        mockMvc.perform(post("api/carros/")
+        mockMvc.perform(post("/api/carros")
                 .content(objectMapper.writeValueAsString(carroNovo))
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isCreated())
