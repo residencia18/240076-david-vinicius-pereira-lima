@@ -1,0 +1,21 @@
+.card-header {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.container {
+  margin-bottom: 50px;
+}
+
+.panel-header {
+  font-weight: bold;
+  font-size: 20px;
+  width: 100%;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}

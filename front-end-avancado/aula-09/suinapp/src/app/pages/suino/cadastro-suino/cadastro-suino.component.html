@@ -1,0 +1,55 @@
+<div class="p-fluid p-grid p-justify-center">
+    <div class="p-col-12 p-md-6">
+        <div class="card" style="margin-top: 2em;">
+            <p-panel header="Cadastro de Suíno">
+                <p-messages [(value)]="msgs"></p-messages>
+                <form [formGroup]="cadastroSuinoForm" (ngSubmit)="onSubmit()">
+                    <div class="p-fluid p-formgrid p-grid">
+                        <div class="p-field p-col-12 p-md-6">
+                            <label for="brinco-animal">Brinco Animal</label>
+                            <input type="number" id="brinco-animal" pInputText formControlName="brincoAnimal" min="0" >
+                            <small *ngIf="cadastroSuinoForm.get('brincoAnimal')?.hasError('required') && cadastroSuinoForm.get('brincoAnimal')?.touched"
+                                class="p-error">Brinco do Animal é obrigatório</small>
+                        </div>
+                        <div class="p-field p-col-12 p-md-6">
+                            <label for="brinco-pai">Brinco Pai</label>
+                            <input type="number" id="brinco-pai" pInputText formControlName="brincoPai" min="0" >
+                            <small *ngIf="cadastroSuinoForm.get('brincoPai')?.hasError('required') && cadastroSuinoForm.get('brincoPai')?.touched"
+                                class="p-error">Brinco do Pai é obrigatório</small>
+                        </div>
+                        <div class="p-field p-col-12 p-md-6">
+                            <label for="brinco-mae">Brinco Mãe</label>
+                            <input type="number" id="brinco-mae" pInputText formControlName="brincoMae" min="0" >
+                            <small *ngIf="cadastroSuinoForm.get('brincoMae')?.hasError('required') && cadastroSuinoForm.get('brincoMae')?.touched"
+                                class="p-error">Brinco da Mãe é obrigatório</small>
+                        </div>
+                        <div class="p-field p-col-12 p-md-6">
+                            <label for="data-nascimento">Data de Nascimento</label>
+                            <p-calendar id="data-nascimento" dateFormat="dd/mm/yy" formControlName="dataNasc"
+                                [showIcon]="true"></p-calendar>
+                        </div>
+                        <div class="p-field p-col-12 p-md-6">
+                            <label for="data-saida">Data da saída</label>
+                            <p-calendar id="data-saida" dateFormat="dd/mm/yy" formControlName="dataSaida"
+                                [showIcon]="true"></p-calendar>
+                        </div>
+                        <div class="p-field p-col-12 p-md-6">
+                            <label for="status">Status</label>
+                            <p-dropdown formControlName="status" [options]="statusValues" optionLabel="name"
+                                placeholder="Selecione"></p-dropdown>
+                        </div>
+                        <div class="p-field p-col-12 p-md-6">
+                            <label for="sexo">Sexo</label>
+                            <p-dropdown formControlName="sexo" [options]="sexoValues" optionLabel="name"
+                                placeholder="Selecione"></p-dropdown>
+                        </div>
+                    </div>
+                    <div id="container-botao">
+                        <button pButton type="submit" label="Cadastrar" class="p-button-success"
+                            [disabled]="cadastroSuinoForm.invalid"></button>
+                    </div>
+                </form>
+            </p-panel>
+        </div>
+    </div>
+</div>

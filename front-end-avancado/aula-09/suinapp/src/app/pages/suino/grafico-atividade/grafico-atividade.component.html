@@ -1,0 +1,27 @@
+<div class="panel-container">
+  <p-panel>
+    <ng-template pTemplate="header" class="header-container">
+      <div class="flex align-items-center gap-2 header">
+        <i class="pi pi-chart-line header-icon"></i>
+        <h3 class="header-title">
+          Atividades do Suíno {{ atividades.brinco }}
+        </h3>
+      </div>
+    </ng-template>
+    <p-messages></p-messages>
+    <p-chart
+      type="bar"
+      [data]="chartData"
+      [options]="chartOptions"
+      *ngIf="atividades.historico; else noData"
+    ></p-chart>
+    <ng-template #noData>
+      <div class="p-message p-message-info" style="margin-top: 20px">
+        <div class="p-message-content">
+          <span class="p-message-icon pi pi-info-circle"></span>
+          <span>Não há dados para exibir</span>
+        </div>
+      </div>
+    </ng-template>
+  </p-panel>
+</div>

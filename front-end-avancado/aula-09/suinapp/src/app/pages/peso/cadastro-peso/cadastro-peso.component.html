@@ -1,0 +1,40 @@
+<div class="p-fluid p-grid p-justify-center">
+    <div class="p-col-12 p-md-6">
+        <div class="card" style="margin-top: 2em;">
+            <p-panel header="Cadastro de Peso">
+                <form [formGroup]="weightForm" (ngSubmit)="onSubmit()">
+                    <p-messages [(value)]="msgs"></p-messages>
+                    <div class="p-fluid p-formgrid p-grid">
+                        <div class="p-field p-col-12 p-md-6">
+                            <label for="brinco">Brinco do Suíno</label>
+                            <input id="brinco" type="number" pInputText formControlName="brinco" />
+                            <small *ngIf="weightForm.get('brinco')?.hasError('required') && weightForm.get('brinco')?.touched"
+                                class="p-error">Brinco é obrigatório</small>
+                            <small *ngIf="weightForm.get('brinco')?.hasError('pattern')" class="p-error">Brinco deve ter
+                                até 3 dígitos</small>
+                        </div>
+                        <div class="p-field p-col-12 p-md-6">
+                            <label for="data">Data da Pesagem</label>
+                            <p-calendar id="data" dateFormat="dd/mm/yy" formControlName="data"
+                                [showIcon]="true"></p-calendar>
+                            <small *ngIf="weightForm.get('data')?.hasError('required') && weightForm.get('data')?.touched"
+                                class="p-error">Data é obrigatória</small>
+                            <small *ngIf="weightForm.get('data')?.hasError('pattern')" class="p-error">Data deve estar
+                                no formato dd/mm/aaaa</small>
+                        </div>
+                        <div class="p-field p-col-12 p-md-6">
+                            <label for="peso">Peso</label>
+                            <input id="peso" type="number" min="0" pInputText formControlName="peso" />
+                            <small *ngIf="weightForm.get('peso')?.hasError('required') && weightForm.get('peso')?.touched"
+                                class="p-error">Peso é obrigatório</small>
+                            <small *ngIf="weightForm.get('peso')?.hasError('pattern')" class="p-error">Peso deve estar
+                                no formato 000 ou 000.0</small>
+                        </div>
+                    </div>
+                    <button pButton type="submit" label="Cadastrar" class="p-button-success" 
+                        [disabled]="weightForm.invalid"></button>
+                </form>
+            </p-panel>
+        </div>
+    </div>
+</div>

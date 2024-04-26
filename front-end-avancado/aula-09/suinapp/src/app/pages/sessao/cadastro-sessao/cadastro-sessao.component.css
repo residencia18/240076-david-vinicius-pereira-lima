@@ -1,0 +1,14 @@
+.p-formgrid {
+    padding: 1em;
+}
+
+.p-field {
+    margin-bottom: 1em;
+}
+
+.card {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1em;
+    margin-bottom: 50px;
+}

@@ -1,0 +1,12 @@
+{
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null",
+    "Pig": {
+      ".indexOn": ["id"]
+    },
+    "Weight": {
+      ".indexOn": ["pig"]
+    }
+  }
+}
