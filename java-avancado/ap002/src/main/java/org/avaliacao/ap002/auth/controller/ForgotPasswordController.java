@@ -37,7 +37,7 @@ public class ForgotPasswordController {
     }
 
     @PostMapping("/verifyEmail/{email}")
-    public ResponseEntity<String>verifyEmail(@PathVariable @Valid String email){
+    public ResponseEntity<String>verifyEmail(@PathVariable String email){
         User user =(User) userRepository.findByEmail(email);
         if (user == null) {
             return ResponseEntity.notFound().build();
@@ -61,7 +61,7 @@ public class ForgotPasswordController {
     }
 
     @PostMapping("/verifyOtp/{otp}/{email}")
-    public ResponseEntity<String>verifyOtp(@PathVariable @Valid Integer otp, @PathVariable @Valid String email){
+    public ResponseEntity<String>verifyOtp(@PathVariable Integer otp, @PathVariable String email){
         User user = (User) userRepository.findByEmail(email);
         ForgotPassword forgotPassword = forgotPasswordRepository.findByOneTimePassAndUser(otp, user).orElseThrow(()->new RuntimeException("Invalid otp for email: " + email));
         if (forgotPassword.getExpirationTime().before(Date.from(Instant.now()))) {
