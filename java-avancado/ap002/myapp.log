@@ -40,3 +40,6 @@
 2024-05-09T14:33:20.783-03:00 DEBUG 14628 --- [ap002] [RMI TCP Connection(2)-192.168.1.22] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@15967820
 2024-05-09T14:33:20.784-03:00 DEBUG 14628 --- [ap002] [RMI TCP Connection(2)-192.168.1.22] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
 2024-05-09T14:33:20.784-03:00  INFO 14628 --- [ap002] [RMI TCP Connection(2)-192.168.1.22] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-05-09T14:39:53.053-03:00  INFO 14628 --- [ap002] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-09T14:39:53.056-03:00  INFO 14628 --- [ap002] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-05-09T14:39:53.059-03:00  INFO 14628 --- [ap002] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
