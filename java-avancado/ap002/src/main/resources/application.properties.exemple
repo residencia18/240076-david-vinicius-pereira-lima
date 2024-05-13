@@ -1,9 +1,9 @@
 spring.application.name = ap002
 
 spring.datasource.driver-class-name=org.postgresql.Driver
-spring.datasource.url=jdbc:postgresql://localhost:5432/email-ap002
-spring.datasource.username=postgres
-spring.datasource.password=Senha@160201
+spring.datasource.url=jdbc:postgresql:
+spring.datasource.username=
+spring.datasource.password=
 ## Hibernate Properties
 # The SQL dialect makes Hibernate generate better SQL for the chosen database
 spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
@@ -25,11 +25,11 @@ logging.level.org.springframework.web = DEBUG
 logging.level.com.myapp.service = INFO
 logging.file.name= myapp.log
 
-api.security.token.secretKey=${JWT_SECRET:ap002-secretkey}
+api.security.token.secretKey=${JWT_SECRET:}
 
 spring.mail.host = smtp.gmail.com
 spring.mail.port = 587
-spring.mail.username= daviddemolidor.dvpl@gmail.com
-spring.mail.password= cjpzlxgqjqfrqwgj
+spring.mail.username=
+spring.mail.password=
 spring.mail.properties.mail.smtp.auth = true
 spring.mail.properties.mail.smtp.starttls.enable=true
