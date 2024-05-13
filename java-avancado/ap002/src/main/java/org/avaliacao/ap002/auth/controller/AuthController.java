@@ -21,7 +21,6 @@ public class AuthController {
 
     @Autowired
     private AuthenticationManager authenticationManager;
-
     @Autowired
     private UserRepository userRepository;
     @Autowired
