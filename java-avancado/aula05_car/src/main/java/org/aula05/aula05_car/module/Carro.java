@@ -1,4 +1,4 @@
-package org.aula04.aula04_car.module;
+package org.aula05.aula05_car.module;
 
 import jakarta.persistence.*;
 @Entity

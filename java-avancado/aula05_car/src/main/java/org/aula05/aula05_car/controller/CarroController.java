@@ -1,13 +1,18 @@
-package org.aula04.aula04_car.controller;
+package org.aula05.aula05_car.controller;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import org.aula04.aula04_car.controller.dto.CarroDTO;
-import org.aula04.aula04_car.controller.form.CarroForm;
-import org.aula04.aula04_car.module.Carro;
-import org.aula04.aula04_car.repository.CarroRepository;
+
+import org.aula05.aula05_car.controller.dto.CarroDTO;
+import org.aula05.aula05_car.controller.form.CarroForm;
+import org.aula05.aula05_car.module.Carro;
+import org.aula05.aula05_car.module.Concessionaria;
+import org.aula05.aula05_car.repository.CarroRepository;
+import org.aula05.aula05_car.repository.ConcessionariaRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -17,14 +22,19 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @RestController
 @RequestMapping(value = "api/carro/", produces = {"application/json"})
 @Tag(name = "api-carro")
 public class CarroController {
+    private static Logger log = LoggerFactory.getLogger(CarroController.class);
     @Autowired
     private CarroRepository carroRepository;
+    @Autowired
+    private ConcessionariaRepository concessionariaRepository;
     @Operation(summary = "Retorna uma lista de todos os carros do banco de dados", method = "GET")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Lista retornada com sucesso!"),
@@ -32,6 +42,7 @@ public class CarroController {
     })
     @GetMapping(consumes = MediaType.ALL_VALUE)
     public List<CarroDTO> retornaCarros(){
+        log.info("Retornando lista de carros");
         List<Carro>listaCarro = (ArrayList<Carro>)carroRepository.findAll();
         List<CarroDTO>listaCarroDTO = new ArrayList<CarroDTO>();
         for(Carro carro : listaCarro){
@@ -48,6 +59,7 @@ public class CarroController {
     })
     @GetMapping(value = "/{id}", consumes = MediaType.ALL_VALUE)
     public ResponseEntity<?> retornaCarroID(@PathVariable Long id){
+        log.info("Retornando carro por Id");
         if(id != null){
             try {
                 Carro carro = carroRepository.getReferenceById(id);
@@ -69,6 +81,7 @@ public class CarroController {
     })
     @GetMapping(value = "/placa/{placa}", consumes = MediaType.ALL_VALUE)
     public ResponseEntity<?> retornaCarroPlaca(@PathVariable String placa){
+        log.info("Retornando carro pela placa");
         if(!placa.isEmpty()){
             try {
                 Carro carro = carroRepository.findCarroByPlaca(placa);
@@ -89,6 +102,7 @@ public class CarroController {
     })
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?>inserirCarro(@RequestBody CarroForm carroForm, UriComponentsBuilder uriBuilder){
+        log.info("Inserindo carro");
         try {
             Carro carro = carroForm.criarCarro();
             carroRepository.save(carro);
@@ -108,6 +122,7 @@ public class CarroController {
     })
     @PostMapping(value = "/inserirLista/", consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> inserirCarros(@RequestBody List<CarroForm> listaCarroForm, UriComponentsBuilder uriBuilder) {
+        log.info("Inserindo lista de carros");
         try {
             List<CarroDTO> carrosDTO = new ArrayList<>();
             for (CarroForm carroForm : listaCarroForm) {
@@ -120,6 +135,24 @@ public class CarroController {
             return ResponseEntity.badRequest().build();
         }
     }
+
+    @Operation(summary = "Associar Carro á Concessionária", method = "POST")
+    @PostMapping(value = "/associarCarroConcessionaria/{concId}/{carId}")
+    public String associarConcessionariaServico(@PathVariable(name = "concId") Long concId, @PathVariable (name = "carId") Long carId){
+        log.info("Associando um Carro existente a uma Concessionária existente");
+        Carro carro = this.carroRepository.getReferenceById(carId);
+        log.info("Detalhes do carro:\t"+carro.toString()+"\n");
+
+        Concessionaria concessionaria = this.concessionariaRepository.getReferenceById(concId);
+        log.info("Detalhes da concessionária:\t"+concessionaria.toString()+"\n");
+
+        Set<Carro> carros = new HashSet<>();
+        carros.add(carro);
+        concessionaria.setCarros(carros);
+        concessionaria = concessionariaRepository.save(concessionaria);
+        log.info("Carro adicionado á concessionária");
+        return "Carro salvo";
+    }
     @Operation(summary = "Atualizar dados do carro", method = "PUT")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Atualização realizada com sucesso"),
@@ -128,6 +161,7 @@ public class CarroController {
     })
     @PutMapping(value = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> updateCarro(@RequestBody CarroForm carroForm, @PathVariable Long id){
+        log.info("Atualizando carro pelo ID");
         if(id != null){
             try {
                 Carro carro = carroRepository.getReferenceById(id);
@@ -158,6 +192,7 @@ public class CarroController {
     })
     @DeleteMapping(value = "/{id}", consumes = MediaType.ALL_VALUE)
     public ResponseEntity<?> deleteCarro(@PathVariable Long id){
+        log.info("Deletando carro pelo ID");
         if(id != null){
             try {
                 Carro carro = carroRepository.getReferenceById(id);

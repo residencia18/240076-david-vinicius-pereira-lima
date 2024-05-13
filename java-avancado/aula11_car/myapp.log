@@ -243,3 +243,6 @@
 2024-04-24T02:30:52.873-03:00 DEBUG 20792 --- [aula11_car] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json]
 2024-04-24T02:30:52.875-03:00 DEBUG 20792 --- [aula11_car] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [Carro(id=null, placa=Updated VEM1Y58, marca=Gutkowski Inc, modelo=Heavy Duty Bronze Shirt, anoFabric (truncated)...]
 2024-04-24T02:30:52.919-03:00 DEBUG 20792 --- [aula11_car] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@e27ba81, started on Wed Apr 24 02:30:49 BRT 2024
+2024-04-24T02:59:05.017-03:00  INFO 20780 --- [aula11_car] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-24T02:59:05.021-03:00  INFO 20780 --- [aula11_car] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-04-24T02:59:05.027-03:00  INFO 20780 --- [aula11_car] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

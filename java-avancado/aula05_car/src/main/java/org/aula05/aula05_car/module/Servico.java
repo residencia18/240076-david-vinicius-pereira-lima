@@ -1,4 +1,4 @@
-package org.aula04.aula04_car.module;
+package org.aula05.aula05_car.module;
 
 import jakarta.persistence.*;
 
@@ -28,8 +28,7 @@ public class Servico {
 
     public Servico() {}
 
-    public Servico(Long id, String descricao, Integer duracao, Long preco) {
-        this.id = id;
+    public Servico(String descricao, Integer duracao, Long preco) {
         this.descricao = descricao;
         this.duracao = duracao;
         this.preco = preco;

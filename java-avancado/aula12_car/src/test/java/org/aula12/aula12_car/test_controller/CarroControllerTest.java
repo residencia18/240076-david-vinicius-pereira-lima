@@ -58,6 +58,7 @@ public class CarroControllerTest {
         carro.setMarca(StringUtils.capitalize(faker.company().name()));
         carro.setModelo(faker.commerce().productName());
         carro.setAnoFabricacao(faker.random().nextInt(1960, LocalDate.now().getYear()));
+        carro.setExists(faker.bool().bool());
         return carro;
     }
 

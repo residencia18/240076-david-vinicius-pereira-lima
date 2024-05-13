@@ -1,8 +1,7 @@
-package org.aula04.aula04_car.controller.form;
+package org.aula05.aula05_car.controller.form;
 
-
-import org.aula04.aula04_car.module.Carro;
-import org.aula04.aula04_car.module.Concessionaria;
+import org.aula05.aula05_car.module.Carro;
+import org.aula05.aula05_car.module.Concessionaria;
 
 public class CarroForm {
     private String placa;

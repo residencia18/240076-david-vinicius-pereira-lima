@@ -33,6 +33,7 @@ public class CarroService {
                     carro.setMarca(carroAtualizado.getMarca());
                     carro.setModelo(carroAtualizado.getModelo());
                     carro.setAnoFabricacao(carroAtualizado.getAnoFabricacao());
+                    carro.setExists(carroAtualizado.isExists());
                     return carroRepository.save(carro);
                 });
     }

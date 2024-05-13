@@ -10,6 +10,7 @@ import lombok.RequiredArgsConstructor;
 import org.aula12.aula12_car.module.Carro;
 import org.aula12.aula12_car.module.Concessionaria;
 import org.aula12.aula12_car.service.CarroService;
+import org.aula12.aula12_car.service.CarroServiceV2;
 import org.aula12.aula12_car.service.ConcessionariaService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,115 +28,23 @@ import java.util.Random;
 @Validated
 @RequestMapping(value = "/v2/carros", produces = {"application/json"})
 @Tag(name = "api-carro")
-@RequiredArgsConstructor
+
 @RestController
-public class CarroControllerV2 {
+public class CarroControllerV2 extends CarroController {
     private static Logger log = LoggerFactory.getLogger(CarroController.class);
-    @Qualifier("carroServiceV2")
-    private final CarroService carroService;
-    private final ConcessionariaService concessionariaService;
-    @Operation(summary = "Retorna uma lista de todos os carros do banco de dados", method = "GET")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Lista retornada com sucesso!"),
-            @ApiResponse(responseCode = "400", description = "Bad Request")
-    })
-    @GetMapping(consumes = MediaType.ALL_VALUE)
-    public ResponseEntity<List<Carro>> retornaCarros(){
-        log.info("Retornando lista de carros");
-        List<Carro>listaCarro = carroService.findAll();
-        return ResponseEntity.ok(listaCarro);
-    }
-    @Operation(summary = "Retorna um carro através do Id", method = "GET")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Carro encontrado com sucesso"),
-            @ApiResponse(responseCode = "400", description = "Id do carro é nulo"),
-            @ApiResponse(responseCode = "404", description = "Id do carro não foi encontrado")
-    })
-    @GetMapping(value = "/{id}", consumes = MediaType.ALL_VALUE)
-    public ResponseEntity<Carro> retornaCarroID(@PathVariable Long id){
-        log.info("Retornando carro por Id");
-        return carroService.findById(id)
-                .map(ResponseEntity::ok)
-                .orElseGet(()->ResponseEntity.notFound().build());
-    }
-    @Operation(summary = "Retorna um carro através da sua placa", method = "GET")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Carro encontrado com sucesso"),
-            @ApiResponse(responseCode = "400", description = "Placa do carro está vazia"),
-            @ApiResponse(responseCode = "404", description = "Placa do carro não encontrada")
-    })
-    @GetMapping(value = "/placa/{placa}", consumes = MediaType.ALL_VALUE)
-    public ResponseEntity<Carro> retornaCarroPlaca(@PathVariable String placa){
-        log.info("Retornando carro pela placa");
-        return carroService.findByPlaca(placa)
-                .map(ResponseEntity::ok)
-                .orElseGet(()->ResponseEntity.notFound().build());
-    }
-    @Operation(summary = "Inserir novo carro no BD", method = "POST")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Carro inserido com sucesso"),
-            @ApiResponse(responseCode = "404", description = "Inserção do carro não teve sucesso")
-    })
-    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<?>inserirCarro(@RequestBody @Valid Carro carro){
-        log.info("Inserindo carro");
-        Carro carroSalvo = carroService.create(carro);
-        return new ResponseEntity<>(carroSalvo, HttpStatus.CREATED);
+    @Qualifier("v2")
+    private CarroServiceV2 carroServiceV2;
 
+    public CarroControllerV2(CarroService carroService, ConcessionariaService concessionariaService, CarroServiceV2 carroServiceV2) {
+        super(carroService, concessionariaService);
+        this.carroServiceV2 = carroServiceV2;
     }
-    @Operation(summary = "Inserir um carro com JavaFaker")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Carro criado e inserido com sucesso"),
-            @ApiResponse(responseCode = "400", description = "Erro ao inserir carro")
-    })
-    @PostMapping(value = "/inserirFakeCarro/")
-    public ResponseEntity<Carro> gerarCarroFaker(){
-        log.info("Criar um novo carro usando JavaFaker");
-        Faker usFaker = new Faker(new Locale("en-US"));
-        Random random = new Random();
-        String placa = usFaker.regexify("[A-Z]{3}\\d[A-Z]\\d{2}");
-        Carro carro = new Carro(placa, usFaker.company().name(), usFaker.commerce().productName(), random.nextInt(1960, LocalDate.now().getYear()));
-        carroService.create(carro);
-        log.info("Carro salvo:\t"+carro+"\n");
-        return new ResponseEntity<>(carro, HttpStatus.CREATED);
-    }
-    @Operation(summary = "Associar Carro á Concessionária", method = "POST")
-    @PostMapping(value = "/{carroId}/assign/{concId}")
-    public ResponseEntity<Void> associarCarroConcessionaria(@PathVariable(name = "concId") Long concId, @PathVariable (name = "carId") Long carId){
-        Concessionaria concessionaria = concessionariaService.findById(concId).orElseThrow(()->new RuntimeException("Concessionária não encontrada"));
-        log.info("Detalhes da concessionária:\t"+concessionaria.toString()+"\n");
 
-        Carro carro = carroService.findById(carId).orElseThrow(()->new RuntimeException("Carro não encontrado"));
-        log.info("Detalhes do carro:\t"+carro.toString()+"\n");
+    @GetMapping("/sorted")
+    public ResponseEntity<List<Carro>>findAllSorted(@RequestParam("sort")String[] sort){
+        List<Carro> carros = carroServiceV2.findAllSorted(sort);
+        return ResponseEntity.ok(carros);
+    }
 
-        concessionaria.getCarros().add(carro);
-        concessionariaService.create(concessionaria);
 
-        return ResponseEntity.ok().build();
-    }
-    @Operation(summary = "Atualizar dados do carro", method = "PUT")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Atualização realizada com sucesso"),
-            @ApiResponse(responseCode = "400", description = "Id do carro tem valor null"),
-            @ApiResponse(responseCode = "404", description = "Id do carro não foi encontrado")
-    })
-    @PutMapping(value = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Carro> updateCarro(@RequestBody @Valid Carro carro, @PathVariable Long id){
-        log.info("Atualizando carro pelo ID");
-        return carroService.update(id, carro)
-                .map(ResponseEntity::ok)
-                .orElseGet(()->ResponseEntity.notFound().build());
-    }
-    @Operation(summary = "Deletar carro do BD", method = "DELETE")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Carro deletado com sucesso"),
-            @ApiResponse(responseCode = "400", description = "Id do carro tem valor null"),
-            @ApiResponse(responseCode = "404", description = "Id do carro não foi encontrado")
-    })
-    @DeleteMapping(value = "/{id}", consumes = MediaType.ALL_VALUE)
-    public ResponseEntity<Void> deleteCarro(@PathVariable Long id) {
-        log.info("Deletando carro pelo ID");
-        carroService.deleteCarro(id);
-        return ResponseEntity.noContent().build();
-    }
 }

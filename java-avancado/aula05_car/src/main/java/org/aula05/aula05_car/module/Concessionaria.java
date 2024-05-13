@@ -1,4 +1,4 @@
-package org.aula04.aula04_car.module;
+package org.aula05.aula05_car.module;
 
 import jakarta.persistence.*;
 
@@ -17,7 +17,7 @@ public class Concessionaria {
     private String nome;
 
     @OneToMany(mappedBy = "concessionaria")
-    private List<Carro> carros;
+    private Set<Carro> carros;
 
     @Column(name = "servicos")
     @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
@@ -48,13 +48,22 @@ public class Concessionaria {
         this.nome = nome;
     }
 
-    public List<Carro> getCarros() {
+    public Set<Carro> getCarros() {
         return carros;
     }
 
-    public void setCarros(List<Carro> carros) {
+    public void setCarros(Set<Carro> carros) {
         this.carros = carros;
     }
+
+    public Set<Servico> getServicos() {
+        return servicos;
+    }
+
+    public void setServicos(Set<Servico> servicos) {
+        this.servicos = servicos;
+    }
+
     public String toString(){
         String str = "";
         for(Carro carro : carros)

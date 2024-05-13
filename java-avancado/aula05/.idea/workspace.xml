@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7c24b69f-55d4-4077-8797-548f17044d8a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../aula05_car/src/main/java/org/aula05/aula05_car/controller/CarroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../aula05_car/src/main/java/org/aula05/aula05_car/controller/CarroController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula05_car/src/main/java/org/aula05/aula05_car/controller/ConcessionariaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../aula05_car/src/main/java/org/aula05/aula05_car/controller/ConcessionariaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula05_car/src/main/java/org/aula05/aula05_car/controller/ServicoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../aula05_car/src/main/java/org/aula05/aula05_car/controller/ServicoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula05_car/src/main/java/org/aula05/aula05_car/controller/form/ServicoForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/../aula05_car/src/main/java/org/aula05/aula05_car/controller/form/ServicoForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula05_car/src/main/java/org/aula05/aula05_car/module/Carro.java" beforeDir="false" afterPath="$PROJECT_DIR$/../aula05_car/src/main/java/org/aula05/aula05_car/module/Carro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula05_car/src/main/java/org/aula05/aula05_car/module/Concessionaria.java" beforeDir="false" afterPath="$PROJECT_DIR$/../aula05_car/src/main/java/org/aula05/aula05_car/module/Concessionaria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula05_car/src/main/java/org/aula05/aula05_car/module/Servico.java" beforeDir="false" afterPath="$PROJECT_DIR$/../aula05_car/src/main/java/org/aula05/aula05_car/module/Servico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula05_car/src/main/java/org/aula05/aula05_car/repository/CarroRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../aula05_car/src/main/java/org/aula05/aula05_car/repository/CarroRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula05_car/src/main/java/org/aula05/aula05_car/repository/ConcessionariaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../aula05_car/src/main/java/org/aula05/aula05_car/repository/ConcessionariaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aula05_car/src/main/java/org/aula05/aula05_car/repository/ServicoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../aula05_car/src/main/java/org/aula05/aula05_car/repository/ServicoRepository.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Ishinaru"
+  }
+}]]></component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/residencia18/240076-david-vinicius-pereira-lima.git",
+    "accountId": "1e4108d8-69ab-4ae1-b4ac-e049367dd2d7"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2fFkJlTAzivC6cB6syC1NmEK9jO" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/david/OneDrive/Área de Trabalho/Programaçao/residencia-avancado/240076-david-vinicius-pereira-lima/java-avancado/aula-05",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7c24b69f-55d4-4077-8797-548f17044d8a" name="Changes" comment="" />
+      <created>1713404143413</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713404143413</updated>
+      <workItem from="1713404144521" duration="750000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

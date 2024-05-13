@@ -1,6 +1,6 @@
-package org.aula04.aula04_car.controller.form;
+package org.aula05.aula05_car.controller.form;
 
-import org.aula04.aula04_car.module.Servico;
+import org.aula05.aula05_car.module.Servico;
 
 public class ServicoForm {
     private String descricao;
@@ -37,5 +37,5 @@ public class ServicoForm {
         this.preco = preco;
     }
 
-    public Servico criarServico(){return new Servico(null, descricao, duracao, preco);}
+    public Servico criarServico(){return new Servico(descricao, duracao, preco);}
 }
