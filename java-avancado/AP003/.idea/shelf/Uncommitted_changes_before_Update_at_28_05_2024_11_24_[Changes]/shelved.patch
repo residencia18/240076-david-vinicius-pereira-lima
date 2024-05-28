@@ -1,0 +1,144 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"7169e1b5-5e5d-4075-8116-552a6dae0be7\" name=\"Changes\" comment=\"&#10;update: fixing service and test with remove\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_05_2024_12_28__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_22_05_2024_12_28__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_05_2024_12_14__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_05_2024_12_14__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Interface\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"develop\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;Ishinaru&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GitToolBoxStore\">\r\n    <option name=\"projectConfigVersion\" value=\"5\" />\r\n    <option name=\"recentBranches\">\r\n      <RecentBranches>\r\n        <option name=\"branchesForRepo\">\r\n          <list>\r\n            <RecentBranchesForRepo>\r\n              <option name=\"branches\">\r\n                <list>\r\n                  <RecentBranch>\r\n                    <option name=\"branchName\" value=\"feature_david\" />\r\n                    <option name=\"lastUsedInstant\" value=\"1715899049\" />\r\n                  </RecentBranch>\r\n                  <RecentBranch>\r\n                    <option name=\"branchName\" value=\"main\" />\r\n                    <option name=\"lastUsedInstant\" value=\"1715899048\" />\r\n                  </RecentBranch>\r\n                </list>\r\n              </option>\r\n              <option name=\"repositoryRootUrl\" value=\"file://$PROJECT_DIR$\" />\r\n            </RecentBranchesForRepo>\r\n          </list>\r\n        </option>\r\n      </RecentBranches>\r\n    </option>\r\n  </component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/mikaelleRubia/AP003.git&quot;,\r\n    &quot;accountId&quot;: &quot;1e4108d8-69ab-4ae1-b4ac-e049367dd2d7&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 5\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2gWpalWX7HapB0TDw0w0BjIAfRA\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;JUnit.CartControllerTest.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.CartControllerTest.testAddToCart.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.CartControllerTest.testClearCartSuccessfully.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.CartControllerTest.testClearCartUnauthorized.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.CartControllerTest.testRemoveFromCart.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.CartControllerTest.testUpdateItemQuantityInCart.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.CartRepositoryTest.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.CartRepositoryTest.testFindByIdNotFound.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.CartRepositoryTest.testFindByUsername.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.CartRepositoryTest.testFindByUsernameNotFound.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.CartRepositoryTest.testSaveAndDelete.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.CartRepositoryTest.testSaveAndFindById.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.CartRepositoryTest.testSaveWithItems.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.CartSeviceTest.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.CartSeviceTest.testAddToCartExistingCartUpdated.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.CartSeviceTest.testAddToCartNewCartCreated.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.CartSeviceTest.testAddToCartProductNotFound.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.CartSeviceTest.testClearCart.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.CartSeviceTest.testRemoveItemFromCart.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.CartSeviceTest.testUpdateItemQuantityInCart.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.CartSeviceTest.testUpdateItemQuantityInCartCartNotFound.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.CartSeviceTest.testUpdateItemQuantityInCartInvalidQuantity.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.CartSeviceTest.testUpdateItemQuantityInCartProductNotFound.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.CartSeviceTest.testUpdateItemQuantityInCartUserNotAuthenticated.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.ShoppingCartItemTest.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.ShoppingCartItemTest.testEmptyName.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.ShoppingCartItemTest.testEmptyNameFromShoppingCartItem.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.ShoppingCartItemTest.testNegativeOrZeroPrice.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.ShoppingCartItemTest.testNullName.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.ShoppingCartItemTest.testNullPrice.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.ShoppingCartItemTest.testValidShoppingCartItem.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.ShoppingCartTest.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.ShoppingCartTest.testEmptyUsername.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.ShoppingCartTest.testMaxUsername.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.ShoppingCartTest.testMinNumberOfItems.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.ShoppingCartTest.testMinUsername.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.ShoppingCartTest.testNegativeCartTotalPrice.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.ShoppingCartTest.testNullCartTotalPrice.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.ShoppingCartTest.testValidShoppingCart.executor&quot;: &quot;Run&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;feature__david&quot;,\r\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/david/OneDrive/Área de Trabalho/Programaçao/residencia-avancado/240076-david-vinicius-pereira-lima/java-avancado/AP003&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CreateClassDialog.RecentsKey\">\r\n      <recent name=\"com.ProvaGrupo.SpringEcommerce.auth.exception.domain.reset.password\" />\r\n      <recent name=\"com.ProvaGrupo.SpringEcommerce.repository\" />\r\n      <recent name=\"com.ProvaGrupo.SpringEcommerce.service\" />\r\n      <recent name=\"com.ProvaGrupo.SpringEcommerce.exception\" />\r\n    </key>\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\david\\OneDrive\\Área de Trabalho\\Programaçao\\residencia-avancado\\240076-david-vinicius-pereira-lima\\java-avancado\\AP003\\SpringEcommerce\\src\\test\\java\\resources\" />\r\n    </key>\r\n    <key name=\"MoveClassesOrPackagesDialog.RECENTS_KEY\">\r\n      <recent name=\"com.ProvaGrupo.SpringEcommerce.service\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"JUnit.CartControllerTest\">\r\n    <configuration name=\"CartControllerTest\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"SpringEcommerce\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.ProvaGrupo.SpringEcommerce.controller.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"com.ProvaGrupo.SpringEcommerce.controller\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.ProvaGrupo.SpringEcommerce.controller.CartControllerTest\" />\r\n      <option name=\"TEST_OBJECT\" value=\"class\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"CartRepositoryTest\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"SpringEcommerce\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.ProvaGrupo.SpringEcommerce.repository.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"com.ProvaGrupo.SpringEcommerce.repository\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.ProvaGrupo.SpringEcommerce.repository.CartRepositoryTest\" />\r\n      <option name=\"TEST_OBJECT\" value=\"class\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"CartRepositoryTest.testSaveAndFindById\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"SpringEcommerce\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.ProvaGrupo.SpringEcommerce.repository.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"com.ProvaGrupo.SpringEcommerce.repository\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.ProvaGrupo.SpringEcommerce.repository.CartRepositoryTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"testSaveAndFindById\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"CartSeviceTest\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"SpringEcommerce\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.ProvaGrupo.SpringEcommerce.service.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"com.ProvaGrupo.SpringEcommerce.service\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.ProvaGrupo.SpringEcommerce.service.CartSeviceTest\" />\r\n      <option name=\"TEST_OBJECT\" value=\"class\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"CartSeviceTest.testAddToCartProductNotFound\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"SpringEcommerce\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.ProvaGrupo.SpringEcommerce.service.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <option name=\"PACKAGE_NAME\" value=\"com.ProvaGrupo.SpringEcommerce.service\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.ProvaGrupo.SpringEcommerce.service.CartSeviceTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"testAddToCartProductNotFound\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"SpringEcommerceApplication\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\" nameIsGenerated=\"true\">\r\n      <option name=\"FRAME_DEACTIVATION_UPDATE_POLICY\" value=\"UpdateClassesAndResources\" />\r\n      <module name=\"SpringEcommerce\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"com.ProvaGrupo.SpringEcommerce.SpringEcommerceApplication\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"JUnit.CartControllerTest\" />\r\n        <item itemvalue=\"JUnit.CartSeviceTest\" />\r\n        <item itemvalue=\"JUnit.CartSeviceTest.testAddToCartProductNotFound\" />\r\n        <item itemvalue=\"JUnit.CartRepositoryTest\" />\r\n        <item itemvalue=\"JUnit.CartRepositoryTest.testSaveAndFindById\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240\" />\r\n        <option value=\"bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"7169e1b5-5e5d-4075-8116-552a6dae0be7\" name=\"Changes\" comment=\"\" />\r\n      <created>1715823253582</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1715823253582</updated>\r\n      <workItem from=\"1715823254657\" duration=\"92000\" />\r\n      <workItem from=\"1715898995693\" duration=\"3735000\" />\r\n      <workItem from=\"1715920399143\" duration=\"6924000\" />\r\n      <workItem from=\"1715951979013\" duration=\"18003000\" />\r\n      <workItem from=\"1716301874428\" duration=\"11692000\" />\r\n      <workItem from=\"1716389771855\" duration=\"30555000\" />\r\n      <workItem from=\"1716498158352\" duration=\"6251000\" />\r\n      <workItem from=\"1716547867137\" duration=\"20119000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"origin/feature_david\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"&#10;creating ShoppingCartItemTest\" />\r\n    <MESSAGE value=\"&#10;creating ShoppingCartItemTest\" />\r\n    <MESSAGE value=\"&#10;update: fixing service and test with remove\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"&#10;update: fixing service and test with remove\" />\r\n  </component>\r\n</project>
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -46,8 +46,12 @@
+               <option name="branches">
+                 <list>
+                   <RecentBranch>
++                    <option name="branchName" value="develop" />
++                    <option name="lastUsedInstant" value="1716578373" />
++                  </RecentBranch>
++                  <RecentBranch>
+                     <option name="branchName" value="feature_david" />
+-                    <option name="lastUsedInstant" value="1715899049" />
++                    <option name="lastUsedInstant" value="1716577929" />
+                   </RecentBranch>
+                   <RecentBranch>
+                     <option name="branchName" value="main" />
+@@ -76,60 +80,60 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;JUnit.CartControllerTest.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.CartControllerTest.testAddToCart.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.CartControllerTest.testClearCartSuccessfully.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.CartControllerTest.testClearCartUnauthorized.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.CartControllerTest.testRemoveFromCart.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.CartControllerTest.testUpdateItemQuantityInCart.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.CartRepositoryTest.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.CartRepositoryTest.testFindByIdNotFound.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.CartRepositoryTest.testFindByUsername.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.CartRepositoryTest.testFindByUsernameNotFound.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.CartRepositoryTest.testSaveAndDelete.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.CartRepositoryTest.testSaveAndFindById.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.CartRepositoryTest.testSaveWithItems.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.CartSeviceTest.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.CartSeviceTest.testAddToCartExistingCartUpdated.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.CartSeviceTest.testAddToCartNewCartCreated.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.CartSeviceTest.testAddToCartProductNotFound.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.CartSeviceTest.testClearCart.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.CartSeviceTest.testRemoveItemFromCart.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.CartSeviceTest.testUpdateItemQuantityInCart.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.CartSeviceTest.testUpdateItemQuantityInCartCartNotFound.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.CartSeviceTest.testUpdateItemQuantityInCartInvalidQuantity.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.CartSeviceTest.testUpdateItemQuantityInCartProductNotFound.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.CartSeviceTest.testUpdateItemQuantityInCartUserNotAuthenticated.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.ShoppingCartItemTest.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.ShoppingCartItemTest.testEmptyName.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.ShoppingCartItemTest.testEmptyNameFromShoppingCartItem.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.ShoppingCartItemTest.testNegativeOrZeroPrice.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.ShoppingCartItemTest.testNullName.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.ShoppingCartItemTest.testNullPrice.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.ShoppingCartItemTest.testValidShoppingCartItem.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.ShoppingCartTest.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.ShoppingCartTest.testEmptyUsername.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.ShoppingCartTest.testMaxUsername.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.ShoppingCartTest.testMinNumberOfItems.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.ShoppingCartTest.testMinUsername.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.ShoppingCartTest.testNegativeCartTotalPrice.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.ShoppingCartTest.testNullCartTotalPrice.executor&quot;: &quot;Run&quot;,
+-    &quot;JUnit.ShoppingCartTest.testValidShoppingCart.executor&quot;: &quot;Run&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;feature__david&quot;,
+-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/Users/david/OneDrive/Área de Trabalho/Programaçao/residencia-avancado/240076-david-vinicius-pereira-lima/java-avancado/AP003&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "JUnit.CartControllerTest.executor": "Run",
++    "JUnit.CartControllerTest.testAddToCart.executor": "Run",
++    "JUnit.CartControllerTest.testClearCartSuccessfully.executor": "Run",
++    "JUnit.CartControllerTest.testClearCartUnauthorized.executor": "Run",
++    "JUnit.CartControllerTest.testRemoveFromCart.executor": "Run",
++    "JUnit.CartControllerTest.testUpdateItemQuantityInCart.executor": "Run",
++    "JUnit.CartRepositoryTest.executor": "Run",
++    "JUnit.CartRepositoryTest.testFindByIdNotFound.executor": "Run",
++    "JUnit.CartRepositoryTest.testFindByUsername.executor": "Run",
++    "JUnit.CartRepositoryTest.testFindByUsernameNotFound.executor": "Run",
++    "JUnit.CartRepositoryTest.testSaveAndDelete.executor": "Run",
++    "JUnit.CartRepositoryTest.testSaveAndFindById.executor": "Run",
++    "JUnit.CartRepositoryTest.testSaveWithItems.executor": "Run",
++    "JUnit.CartSeviceTest.executor": "Run",
++    "JUnit.CartSeviceTest.testAddToCartExistingCartUpdated.executor": "Run",
++    "JUnit.CartSeviceTest.testAddToCartNewCartCreated.executor": "Run",
++    "JUnit.CartSeviceTest.testAddToCartProductNotFound.executor": "Run",
++    "JUnit.CartSeviceTest.testClearCart.executor": "Run",
++    "JUnit.CartSeviceTest.testRemoveItemFromCart.executor": "Run",
++    "JUnit.CartSeviceTest.testUpdateItemQuantityInCart.executor": "Run",
++    "JUnit.CartSeviceTest.testUpdateItemQuantityInCartCartNotFound.executor": "Run",
++    "JUnit.CartSeviceTest.testUpdateItemQuantityInCartInvalidQuantity.executor": "Run",
++    "JUnit.CartSeviceTest.testUpdateItemQuantityInCartProductNotFound.executor": "Run",
++    "JUnit.CartSeviceTest.testUpdateItemQuantityInCartUserNotAuthenticated.executor": "Run",
++    "JUnit.ShoppingCartItemTest.executor": "Run",
++    "JUnit.ShoppingCartItemTest.testEmptyName.executor": "Run",
++    "JUnit.ShoppingCartItemTest.testEmptyNameFromShoppingCartItem.executor": "Run",
++    "JUnit.ShoppingCartItemTest.testNegativeOrZeroPrice.executor": "Run",
++    "JUnit.ShoppingCartItemTest.testNullName.executor": "Run",
++    "JUnit.ShoppingCartItemTest.testNullPrice.executor": "Run",
++    "JUnit.ShoppingCartItemTest.testValidShoppingCartItem.executor": "Run",
++    "JUnit.ShoppingCartTest.executor": "Run",
++    "JUnit.ShoppingCartTest.testEmptyUsername.executor": "Run",
++    "JUnit.ShoppingCartTest.testMaxUsername.executor": "Run",
++    "JUnit.ShoppingCartTest.testMinNumberOfItems.executor": "Run",
++    "JUnit.ShoppingCartTest.testMinUsername.executor": "Run",
++    "JUnit.ShoppingCartTest.testNegativeCartTotalPrice.executor": "Run",
++    "JUnit.ShoppingCartTest.testNullCartTotalPrice.executor": "Run",
++    "JUnit.ShoppingCartTest.testValidShoppingCart.executor": "Run",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
++    "git-widget-placeholder": "develop",
++    "kotlin-language-version-configured": "true",
++    "last_opened_file_path": "C:/Users/david/OneDrive/Área de Trabalho/Programaçao/residencia-avancado/240076-david-vinicius-pereira-lima/java-avancado/unit-testing-activities-java",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
++    "vue.rearranger.settings.migration": "true"
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="CreateClassDialog.RecentsKey">
+       <recent name="com.ProvaGrupo.SpringEcommerce.auth.exception.domain.reset.password" />
+@@ -264,6 +268,7 @@
+       <workItem from="1716389771855" duration="30555000" />
+       <workItem from="1716498158352" duration="6251000" />
+       <workItem from="1716547867137" duration="20119000" />
++      <workItem from="1716867350603" duration="59000" />
+     </task>
+     <servers />
+   </component>

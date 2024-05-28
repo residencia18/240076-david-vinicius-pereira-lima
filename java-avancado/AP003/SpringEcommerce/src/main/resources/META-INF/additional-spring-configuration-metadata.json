@@ -1,0 +1,12 @@
+{"properties": [
+    {
+      "name": "auth.security.token.secret",
+      "type": "java.lang.String",
+      "description": "A reference for 'auth.security.token.secret', which is the secret key used to sign the JWT token. This key should be kept secret and should not be shared with anyone. Environment variables can be used to set this value."
+    },
+    {
+      "name": "auth.security.token.expiration-time",
+      "type": "java.lang.String",
+      "description": "A reference for 'auth.security.token.expiration-time', which is the expiration time of the JWT token. This value is in seconds. Environment variables can be used to set this value."
+    }
+  ]}
