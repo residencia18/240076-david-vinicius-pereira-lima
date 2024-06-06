@@ -1,4 +1,4 @@
-package com.example.atividades.atividade07;
+package com.example.atividades.atividade10;
 
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.BeforeEach;

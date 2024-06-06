@@ -1,0 +1,6 @@
+Detected: Sample Text
+Confidence: 99.0
+Id: 1
+Parent Id: 0
+Type: LINE
+
